@@ -4,12 +4,15 @@
 
 #### Description
 
-- Database
+#### Database
+
 Have local install of Postgres dB with PostGis installed and enabled.
 Visualization tools (e.g. Pgadmin4) recommended to allow myself or others to help debug problems.
 Create a DB called Project1 and use the public schema for this project.
-Find a data file from https://cs.msutexas.edu/~griffin/data and load it into your DB. Obviously create an appropriate table with a geometry data type added to allow for some spatial query's to be run.
-Api
+Find a data file from <https://cs.msutexas.edu/~griffin/data> and load it into your DB. Obviously create an appropriate table with a geometry data type added to allow for some spatial query's to be run.
+
+#### Api
+
 Have a local api that has the following routes:
 findAll
 findOne
