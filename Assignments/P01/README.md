@@ -1,4 +1,4 @@
-## P01 - Project setup
+## Program 1 - Project setup
 
 ### Loic Konan
 
