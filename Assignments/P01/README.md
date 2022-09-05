@@ -28,7 +28,7 @@ Returns a single tuple which contains the closest geometry to the one passed in 
 
 |   #   | File                         | Description                                |
 | :---: | ---------------------------- | ------------------------------------------ |
-|   1   | [main.cpp](main.cpp)         | The main cpp with comments and description |
+|   1   | [main.py](main.py)         | The main py with comments and description |
                                 |
 
 ### Instructions
