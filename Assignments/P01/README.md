@@ -20,8 +20,8 @@
 - Created _**GET routes**_ to retrieve data from the database using the following route:
   
 <br /> <br />
-<h2 align="center">(Swagger) to see the documentation of the API. </h2>
 **<http://127.0.0.1:8000/docs#/>**
+<h2 align="center">(Swagger) to see the documentation of the API. </h2>
 <img src="fastapi.png">
 <br /> <br /><br /><br /><br /><br />
 
