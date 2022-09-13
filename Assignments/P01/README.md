@@ -41,23 +41,26 @@
 > <http://127.0.0.1:8000/docs#/default/airports2_Countries_with_more_than_200_airports_get>
 > <img src="get3.png">
 >
-> - **Route Route display all the AIRPORTS in a specific in Dallas:** 
+> - **Route Route display all the AIRPORTS in a specific in Dallas:**
 > <http://127.0.0.1:8000/Enter> City?city=Dallas>
 > <img src="get5.png">
 >
-> - **Route display the total number of Airports in Mexico:** 
+> - **Route display the total number of Airports in Mexico:**
 > <http://127.0.0.1:8000/NumberofAirportsinaCountry?country=Mexico>
 >
 > <img src="get6.png">
 >
 ### Instructions
 
-- Must have **Python** installed on your computer.
-- Must have **Fastapi** installed on your computer.
-- Must have **Postgres** installed on your computer.
-- Must have **Postgis** installed on your computer.
-- Must have **Psycopg2** installed on your computer.
-  
+```
+* - Must have **Python** installed on your computer.
+* - Must have **Fastapi** installed on your computer.
+* - Must have **Postgres** installed on your computer.
+* - Must have **Postgis** installed on your computer.
+* - Must have **Psycopg2** installed on your computer.
+
+```  
+
 - run the following **command** to start the server:
   
   - Click on the **play button** in the top right corner of the screen.
@@ -71,12 +74,12 @@
 
 - Interact with the **API** using the following routes:
   
-  - **<http://127.0.0.1:8000/docs#/default/docs_redirect__get>** (Swagger)
-  - Click on the **GET** button to see the results.
-  - Click on the **Try it out** button to see the results.
-  - Click on the **Execute** button to see the results.
-  - Click on the **Clear** button to clear.
-  - Click on the **Cancel** button to cancel the process.
+  1. - **<http://127.0.0.1:8000/docs#/default/docs_redirect__get>** (Swagger)
+  2. - Click on the **GET** button to see the results.
+  3. - Click on the **Try it out** button to see the results.
+  4. - Click on the **Execute** button to see the results.
+  5. - Click on the **Clear** button to clear.
+  6. - Click on the **Cancel** button to cancel the process.
   
 ### Files
 
