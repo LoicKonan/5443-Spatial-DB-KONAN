@@ -52,14 +52,12 @@
 >
 ### Instructions
 
-```
+
 - Must have **Python** installed on your computer.
 - Must have **Fastapi** installed on your computer.
 - Must have **Postgres** installed on your computer.
 - Must have **Postgis** installed on your computer.
 - Must have **Psycopg2** installed on your computer.
-
-```  
 
 - run the following **command** to start the server:
   
