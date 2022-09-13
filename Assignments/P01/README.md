@@ -8,22 +8,22 @@
 - []: # **Description:** _**Project setup with Postgres + Postgis + Fastapi + Docker**_
 - []: # **Tags:** _**[Postgres, Postgis, Fastapi, Docker]**_
 
-### Loic Konan
+## Loic Konan
 
-#### Description
+### Description
 
 - **Postgres + Postgis + Fastapi + Docker**.
 - Using **Pgadmin4** for Visualization tools to help debug problems.
 - Created a DB called **Project1** with a public schema.
 - Created a **location** table with a geometry data type for **spatial query's** to be run.
 - Created a local database using data files located at the following address: **<https://cs.msutexas.edu/~griffin/data/>** (Airports2).
-- Created _**GET routes**_ to retrieve data from the database using the following route:\n\n\n\n
+- Created _**GET routes**_ to retrieve data from the database using the following route:
 >
 > - **<http://127.0.0.1:8000/docs#/>** (Swagger) to see the documentation of the API.
 >
 >  <img src="fastapi.png">
->
->
+
+
 > ### GET Routes
 >
 > - **Display all the 7 different Routes:** <http://127.0.0.1:8000/docs#/default/docs_redirect__get>
