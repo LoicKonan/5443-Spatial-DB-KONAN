@@ -26,22 +26,27 @@
 >
 > ### GET Routes
 >
-> - **Route:** <http://127.0.0.1:8000/docs#/default/docs_redirect__get>
+> - **Display all the 7 different Routes:** <http://127.0.0.1:8000/docs#/default/docs_redirect__get>
 > <img src="get.png">
 >
-> - **Route:** <http://127.0.0.1:8000/docs#/default/airports2_Airports__lon___lat__get>
+> - **Route display all the AIRPORTS between this longitude and latitude:**
+> <http://127.0.0.1:8000/docs#/default/airports2_Airports__lon___lat__get>
 > <img src="get1.png">
 >
-> - **Route:** <http://127.0.0.1:8000/docs#/default/airports2_Enter_City_get>
+> - **Route display all the AIRPORTS in a specific City:**
+> <http://127.0.0.1:8000/docs#/default/airports2_Enter_City_get>
 > <img src="get2.png">
 >
-> - **Route:** <http://127.0.0.1:8000/docs#/default/airports2_Countries_with_more_than_200_airports_get>
+> - **Route display Countries with more than 200 Airport.:**
+> <http://127.0.0.1:8000/docs#/default/airports2_Countries_with_more_than_200_airports_get>
 > <img src="get3.png">
-> 
-> - **Route:** <http://127.0.0.1:8000/Enter City?city=Dallas>
+>
+> - **Route Route display all the AIRPORTS in a specific in Dallas:** 
+> <http://127.0.0.1:8000/Enter> City?city=Dallas>
 > <img src="get5.png">
 >
-> - **Route:** <http://127.0.0.1:8000/NumberofAirportsinaCountry?country=Mexico
+> - **Route display the total number of Airports in Mexico:** 
+> <http://127.0.0.1:8000/NumberofAirportsinaCountry?country=Mexico>
 >
 > <img src="get6.png">
 >
