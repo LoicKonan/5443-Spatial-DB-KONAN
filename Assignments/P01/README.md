@@ -7,6 +7,8 @@
 - []: # **Date:** _**2022-09-08**_
 - []: # **Description:** _**Project setup with Postgres + Postgis + Fastapi + Docker**_
 - []: # **Tags:** _**[Postgres, Postgis, Fastapi, Docker]**_
+  
+  <br /><br />
 
 ## Loic Konan
 
