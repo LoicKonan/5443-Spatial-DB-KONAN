@@ -24,7 +24,7 @@
 **<http://127.0.0.1:8000/docs#/>**
 <h2 align="center">The route above display the API documentation (Swagger). </h2>
 <img src="fastapi.png">
-<br /> <br /><br />
+<br /> <br />
 
 
 <h1 align="center">GET Routes. </h1>
@@ -32,19 +32,19 @@
 **<http://127.0.0.1:8000/docs#/default/docs_redirect__get>**
 <h2 align="center">The Route above display all the 7 different RoutesDisplay all the 7 different Routes. </h2>
 <img src="get.png">
-<br /> <br /><br />
+<br /> <br />
 
 **<http://127.0.0.1:8000/docs#/default/airports2_Airports__lon___lat__get>**
 <h2 align="center">The Route above display all the AIRPORTS between a specific longitude and latitude. </h2>
 <img src="get1.png">
 
-<br /> <br /><br />
+<br /> <br />
 
 **<http://127.0.0.1:8000/docs#/default/airports2_Enter_City_get>**
 <h2 align="center">The Route above display all the AIRPORTS in a specific City. </h2>
 <img src="get2.png">
 
-<br /> <br /><br />
+<br /> <br />
 
 
 **<http://127.0.0.1:8000/Enter> City?city=Dallas>**
@@ -55,13 +55,13 @@
 <h2 align="center">The Route above display all the Countries with more than 200 Airport. </h2>
 <img src="get3.png">
 
-<br /> <br /><br />
+<br /> <br />
 
 **Route display the total number of Airports in Mexico:**
 **<http://127.0.0.1:8000/NumberofAirportsinaCountry?country=Mexico>**
 <h2 align="center">The Route above display the total number of Airports in Mexico. </h2>
 <img src="get6.png">
-<br /> <br /><br />
+<br /> <br />
 
 ### Instructions
 
