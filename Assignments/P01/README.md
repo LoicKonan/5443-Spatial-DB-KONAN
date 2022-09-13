@@ -1,12 +1,12 @@
 ## Project 01 - Project setup with Postgres + Postgis + Fastapi + Docker
 
-- []: # **Language:** _**markdown**_
-- []: # **Path:** _**README.md**_
-- []: # **Title:** _**Project 01**_
-- []: # **Author:** _**[Loic_Konan](Loic_Konan)**_
-- []: # **Date:** _**2022-09-08**_
-- []: # **Description:** _**Project setup with Postgres + Postgis + Fastapi + Docker**_
-- []: # **Tags:** _**[Postgres, Postgis, Fastapi, Docker]**_
+- []: # **Language:** _markdown_
+- []: # **Path:** _README.md_
+- []: # **Title:** _Project 01_
+- []: # **Author:** _[Loic_Konan](Loic_Konan)_
+- []: # **Date:** _2022-09-08_
+- []: # **Description:** _Project setup with Postgres + Postgis + Fastapi + Docker_
+- []: # **Tags:** **_[Postgres, Postgis, Fastapi, Docker]_**
   
   <br /><br />
 
