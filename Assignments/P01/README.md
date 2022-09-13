@@ -19,7 +19,7 @@
 - Created a local database using data files located at the following address: **<https://cs.msutexas.edu/~griffin/data/>** (Airports2).
 - Created _**GET routes**_ to retrieve data from the database using the following route:
   
-<br /> <br /><br /><br />
+<br /> <br />
 
 > - **<http://127.0.0.1:8000/docs#/>** (Swagger) to see the documentation of the API.
 >
@@ -27,7 +27,7 @@
 >
 <br /> <br /><br /><br /><br /><br />
 
-> ### GET Routes
+### GET Routes
 >
 > - **Display all the 7 different Routes:** <http://127.0.0.1:8000/docs#/default/docs_redirect__get>
 > <img src="get.png">
