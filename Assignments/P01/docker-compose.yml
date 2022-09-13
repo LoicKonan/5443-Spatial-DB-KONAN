@@ -1,0 +1,31 @@
+# docker-compose.yml
+
+# Version 3 is currently the newest version of the Compose file format
+version: '3'
+
+# We're creating a single 'service': our database.
+services:
+  # Our service doesn't need to be called postgres.
+  # It can be called anything you want (Project1), as long as the image is correct
+  postgres:
+    # Here we define a prebuilt Postgres image,
+    # i.e. the version we want to use
+    image: 'postgres:9.6'
+    # Map port 5432 of the container to port 5432 on our machine,
+    # so we'll be able to access it at `localhost:5432`
+    ports:
+      - '5432:5432'
+    # Define our username and password - they can be whatever you want.
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=kouassi
+    # Volumes persist data generated and used by Docker containers
+    # They're optional but useful
+    volumes:
+      # We name our volume "db-data" and define a path for it
+      - db-data:/var/lib/postgresql/data:delegated
+
+# Since we included a volume for our db,
+# we need to list it here!
+volumes:
+  db-data:

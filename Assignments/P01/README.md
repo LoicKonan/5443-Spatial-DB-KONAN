@@ -1,40 +1,77 @@
-## Program 1 - Project setup
+## Project 01 - Project setup with Postgres + Postgis + Fastapi + Docker
+
+[]: # Language: markdown
+[]: # Path: README.md
+[]: # Title: Project 01
+[]: # Author: [Loic_Konan](Loic_Konan)
+[]: # Date: 2022-09-08
+[]: # Description: Project setup with Postgres + Postgis + Fastapi + Docker
+[]: # Tags: [Postgres, Postgis, Fastapi, Docker]
 
 ### Loic Konan
 
 #### Description
 
-#### Database
-
-Have local install of Postgres dB with PostGis installed and enabled.
-Visualization tools (e.g. Pgadmin4) recommended to allow myself or others to help debug problems.
-Create a DB called Project1 and use the public schema for this project.
-Find a data file from <https://cs.msutexas.edu/~griffin/data> and load it into your DB. Obviously create an appropriate table with a geometry data type added to allow for some spatial query's to be run.
-
-#### Api
-
-Have a local api that has the following routes:
-findAll
-findOne
-findClosest
-findAll
-Returns all the tuples from your table
-findOne
-Returns a single tuple based on a column name (attribute) and value (e.g id=1299 , or name=texas).
-findClosest
-Returns a single tuple which contains the closest geometry to the one passed in (e.g. lon=-123.63454&lat=34.74645)
-
-### Files
-
-|   #   | File                         | Description                                |
-| :---: | ---------------------------- | ------------------------------------------ |
-|   1   | [main.py](main.py)         | The main py with comments and description |
-                                |
-
+- **Postgres + Postgis + Fastapi + Docker**.
+- Using **Pgadmin4** for Visualization tools to help debug problems.
+- Created a DB called **Project1** with a public schema.
+- Created a **location** table with a geometry data type for **spatial query's** to be run.
+- Created a local database using data files located at the following address: **<https://cs.msutexas.edu/~griffin/data/>** (Airports2).
+- Created _**GET routes**_ to retrieve data from the database using the following route:
+>
+> - **<http://127.0.0.1:8000/docs#/>** (Swagger) to see the documentation of the API.
+>
+>  <img src="fastapi.png">
+>
+>
+> ### GET Routes
+>
+> - **Route:** <http://127.0.0.1:8000/docs#/default/docs_redirect__get>
+> <img src="get.png">
+>
+> - **Route:** <http://127.0.0.1:8000/docs#/default/airports2_Airports__lon___lat__get>
+> <img src="get1.png">
+>
+> - **Route:** <http://127.0.0.1:8000/docs#/default/airports2_Enter_City_get>
+> <img src="get2.png">
+>
+> - **Route:** <http://127.0.0.1:8000/docs#/default/airports2_Countries_with_more_than_200_airports_get>
+> <img src="get3.png">
+> 
+> - **Route:** <http://127.0.0.1:8000/Enter City?city=Dallas>
+> <img src="get5.png">
+>
+> - **Route:** <http://127.0.0.1:8000/NumberofAirportsinaCountry?country=Mexico
+>
+> <img src="get6.png">
+>
 ### Instructions
 
-- This 
+- run the following **command** to start the server:
+  
+  - Click on the **play button** in the top right corner of the screen.
+  - Or **uvicorn api:app --reload**
+  
+- Run the following command to start the **docker container** (Only if you have Docker install) :
+  
+  ```bash
+  docker-compose up -d
+  ```
 
-### Example Command
+- Interact with the **API** using the following routes:
+  
+  - **<http://127.0.0.1:8000/docs#/default/docs_redirect__get>** (Swagger)
+  - Click on the **GET** button to see the results.
+  - Click on the **Try it out** button to see the results.
+  - Click on the **Execute** button to see the results.
+  - Click on the **Clear** button to clear.
+  - Click on the **Cancel** button to cancel the process.
+  
+### Files
 
-- None for now.
+|   #   | File                               | Description                                     | Status                  |
+| :---: | ---------------------------------- | ----------------------------------------------- | ----------------------- |
+|   1   | [api.py](api.py)| api file file    | :ballot_box_with_check: |
+|   2   | [README.md](README.md) | README file | :ballot_box_with_check: |
+|   3   | [docker-compose.yml](docker-compose.yml) | docker-compose file | :ballot_box_with_check: |
+|   4   | [airports2.csv](airports2.csv) | airports2 file | :ballot_box_with_check: |
