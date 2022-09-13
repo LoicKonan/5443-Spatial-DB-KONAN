@@ -17,12 +17,13 @@
 - Created a DB called **Project1** with a public schema.
 - Created a **location** table with a geometry data type for **spatial query's** to be run.
 - Created a local database using data files located at the following address: **<https://cs.msutexas.edu/~griffin/data/>** (Airports2).
-- Created _**GET routes**_ to retrieve data from the database using the following route:
+- Created _**GET routes**_ to retrieve data from the database using the following route:<br />
 >
 > - **<http://127.0.0.1:8000/docs#/>** (Swagger) to see the documentation of the API.
 >
 >  <img src="fastapi.png">
-
+>
+><br />
 
 > ### GET Routes
 >
