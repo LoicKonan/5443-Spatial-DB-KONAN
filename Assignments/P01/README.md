@@ -21,7 +21,7 @@
   
 <br /> <br />
 
-<h2 align="center"> **<http://127.0.0.1:8000/docs#/>** (Swagger) to see the documentation of the API. </h2>
+<h2 align="center"> <http://127.0.0.1:8000/docs#/>(Swagger) to see the documentation of the API. </h2>
 
   <img src="fastapi.png">
 
