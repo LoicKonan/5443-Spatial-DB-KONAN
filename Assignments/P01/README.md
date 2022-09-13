@@ -17,7 +17,7 @@
 - Created a DB called **Project1** with a public schema.
 - Created a **location** table with a geometry data type for **spatial query's** to be run.
 - Created a local database using data files located at the following address: **<https://cs.msutexas.edu/~griffin/data/>** (Airports2).
-- Created _**GET routes**_ to retrieve data from the database using the following route:
+- Created _**GET routes**_ to retrieve data from the database using the following route:\n\n\n\n
 >
 > - **<http://127.0.0.1:8000/docs#/>** (Swagger) to see the documentation of the API.
 >
@@ -72,12 +72,12 @@
 
 - Interact with the **API** using the following routes:
   
-  1. - **<http://127.0.0.1:8000/docs#/default/docs_redirect__get>** (Swagger)
-  2. - Click on the **GET** button to see the results.
-  3. - Click on the **Try it out** button to see the results.
-  4. - Click on the **Execute** button to see the results.
-  5. - Click on the **Clear** button to clear.
-  6. - Click on the **Cancel** button to cancel the process.
+  - **<http://127.0.0.1:8000/docs#/default/docs_redirect__get>** (Swagger)
+  - Click on the **GET** button to see the results.
+  - Click on the **Try it out** button to see the results.
+  - Click on the **Execute** button to see the results.
+  - Click on the **Clear** button to clear.
+  - Click on the **Cancel** button to cancel the process.
   
 ### Files
 
