@@ -46,15 +46,14 @@
 
 <br /> <br /><br />
 
-**<http://127.0.0.1:8000/docs#/default/airports2_Countries_with_more_than_200_airports_get>**
-<h2 align="center">The Route above display all the Countries with more than 200 Airport. </h2>
-<img src="get3.png">
-
-<br /> <br /><br />
 
 **<http://127.0.0.1:8000/Enter> City?city=Dallas>**
 <h2 align="center">The Route above display all the AIRPORTS in Dallas. </h2>
 <img src="get5.png">
+
+**<http://127.0.0.1:8000/docs#/default/airports2_Countries_with_more_than_200_airports_get>**
+<h2 align="center">The Route above display all the Countries with more than 200 Airport. </h2>
+<img src="get3.png">
 
 <br /> <br /><br />
 
