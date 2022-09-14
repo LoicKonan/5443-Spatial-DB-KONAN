@@ -18,7 +18,7 @@
 - Using **Pgadmin4** for Visualization tools to help debug problems.
 - Created a DB called **Project1** with a public schema.
 - The table creation is done in the **Pgadmin4**.
-- Created a table called **users** with the following columns:
+- Created a table called **airports2** with the following columns:
   
   - id
   - name
@@ -35,7 +35,7 @@
   - type
   - location (spatial geometry)
 
-- Created a **location** table with a geometry data type for **spatial query's** to be run.
+- Created a **location** coloumn with a geometry data type for **spatial query's** to be run.
 - Created a local database using data files located at the following address: **<https://cs.msutexas.edu/~griffin/data/>** (Airports2).
 - Created _**GET routes**_ to retrieve data from the database using the following route:
   

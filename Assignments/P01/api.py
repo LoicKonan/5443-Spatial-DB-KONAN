@@ -23,7 +23,7 @@
                         - type 
                         - location (spatial geometry)
                         
-                    Created a **location** table with a geometry data type for spatial query's to be run.
+                    Created a **location** column with a geometry data type for spatial query's to be run.
                     Created a local database using data files located at the following address: 
                     <https://cs.msutexas.edu/~griffin/data/> (Airports2).
                     Created GET routes to retrieve data from the database using the following route:
