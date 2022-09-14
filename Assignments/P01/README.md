@@ -4,7 +4,7 @@
 - []: # **Path:** _README.md_
 - []: # **Title:** _Project 01_
 - []: # **Author:** _[Loic_Konan](Loic_Konan)_
-- []: # **Date:** _2022-09-08_
+- []: # **Date:** _09/08/2022_
 - []: # **Description:** _Project setup with Postgres + Postgis + Fastapi + Docker_
 - []: # **Tags:** **_[Postgres, Postgis, Fastapi, Docker]_**
   
@@ -17,6 +17,24 @@
 - **Postgres + Postgis + Fastapi + Docker**.
 - Using **Pgadmin4** for Visualization tools to help debug problems.
 - Created a DB called **Project1** with a public schema.
+- The table creation is done in the **Pgadmin4**.
+- Created a table called **users** with the following columns:
+  
+  - id
+  - name
+  - city
+  - country
+  - three_code
+  - four_code
+  - lat (latitude)
+  - lon (longitude)
+  - elevation
+  - gmt
+  - tz (timezone)
+  - time_zone 
+  - type
+  - location (spatial geometry)
+
 - Created a **location** table with a geometry data type for **spatial query's** to be run.
 - Created a local database using data files located at the following address: **<https://cs.msutexas.edu/~griffin/data/>** (Airports2).
 - Created _**GET routes**_ to retrieve data from the database using the following route:

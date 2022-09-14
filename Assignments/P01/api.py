@@ -1,3 +1,38 @@
+"""
+# Author      :     Loic Konan
+# Title       :     Project 1 - Project setup with Postgres + Postgis + Fastapi + Docker
+# Date        :     09/08/2022 
+# Description :
+                    Postgres + Postgis + Fastapi + Docker.
+                    Using Pgadmin4 for Visualization tools to help debug problems.
+                    Created a DataBase called Project1 with a public schema.
+                    The table creation is done in the Pgadmin4.
+                    Created a table called "airports2" with the following columns:
+                        - id
+                        - name
+                        - city
+                        - country
+                        - three_code
+                        - four_code
+                        - lat (latitude)
+                        - lon (longitude)
+                        - elevation 
+                        - gmt 
+                        - tz (timezone)
+                        - timezone
+                        - type 
+                        - location (spatial geometry)
+                        
+                    Created a **location** table with a geometry data type for spatial query's to be run.
+                    Created a local database using data files located at the following address: 
+                    <https://cs.msutexas.edu/~griffin/data/> (Airports2).
+                    Created GET routes to retrieve data from the database using the following route:
+                    <http://127.0.0.1:8000/docs#/> (Swagger).
+
+
+"""
+
+
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 import uvicorn
