@@ -84,7 +84,7 @@
   ```bash
   docker-compose up -d
   ```
- <br /> <br />
+ <br /> 
 
 - Interact with the **API** using the following routes:
   
