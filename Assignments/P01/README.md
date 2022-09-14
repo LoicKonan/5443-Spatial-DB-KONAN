@@ -95,6 +95,9 @@
   - Click on the **Clear** button to clear.
   - Click on the **Cancel** button to cancel the process.
   
+  <br /> <br />
+
+  
 ### Files
 
 |   #   | File                               | Description                                     | Status                  |
