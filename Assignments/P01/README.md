@@ -77,12 +77,14 @@
   
   - Click on the **play button** in the top right corner of the screen.
   - Or **uvicorn api:app --reload**
-  
+ <br /> <br />
+ 
 - Run the following command to start the **docker container** (Only if you have Docker install) :
   
   ```bash
   docker-compose up -d
   ```
+ <br /> <br />
 
 - Interact with the **API** using the following routes:
   
