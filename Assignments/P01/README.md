@@ -32,7 +32,7 @@
 <h1 align="center">GET Routes. </h1>
 
 **<http://127.0.0.1:8000/docs#/default/docs_redirect__get>**
-<h2 align="center">The Route above display all the 7 different RoutesDisplay all the 7 different Routes. </h2>
+<h2 align="center">The Route above display all the 7 different Routes Display all the 7 different Routes. </h2>
 <img src="get.png">
 <br /> <br /><br />
 
