@@ -48,10 +48,11 @@
 
 <br /> <br /><br />
 
-
 **<http://127.0.0.1:8000/Enter> City?city=Dallas>**
 <h2 align="center">The Route above display all the AIRPORTS in Dallas. </h2>
 <img src="get5.png">
+
+<br /> <br /><br />
 
 **<http://127.0.0.1:8000/docs#/default/airports2_Countries_with_more_than_200_airports_get>**
 <h2 align="center">The Route above display all the Countries with more than 200 Airport. </h2>
@@ -59,7 +60,6 @@
 
 <br /> <br /><br />
 
-**Route display the total number of Airports in Mexico:**
 **<http://127.0.0.1:8000/NumberofAirportsinaCountry?country=Mexico>**
 <h2 align="center">The Route above display the total number of Airports in Mexico. </h2>
 <img src="get6.png">
