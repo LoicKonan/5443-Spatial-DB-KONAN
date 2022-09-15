@@ -14,7 +14,7 @@
 
 - **Postgres + Postgis + Fastapi + Docker**.
 - Using **Pgadmin4** for Visualization tools to help debug problems.
-- Created a DB called **Project1** with a public schema.
+- Created a DataBase called **Project1** with a public schema.
 - The table creation is done in the **Pgadmin4**.
 - Created a table called **airports2** with the following columns:
   
