@@ -4,7 +4,7 @@
 - []: # **Path:** _README.md_
 - []: # **Title:** _Project 02A_
 - []: # **Author:** _[Loic_Konan](Loic_Konan)_
-- []: # **Date:** _09/08/2022_
+- []: # **Date:** _09/19/2022_
 - []: # **Description:** _World Data with Postgres + Postgis + Fastapi + Docker_
 - []: # **Tags:** **_[Postgres, Postgis, Fastapi, Docker]_**
   
