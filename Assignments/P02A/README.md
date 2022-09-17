@@ -102,6 +102,7 @@
   ```bash
   docker-compose up -d
   ```
+
  <br /> 
 
 - Interact with the **API** using the following routes:
@@ -115,7 +116,6 @@
   
   <br /> <br />
 
-  
 ### Files
 
 |   #   | File                               | Description                                     | Status                  |

@@ -1,11 +1,7 @@
 """
 # Author      :     Loic Konan
 # Title       :     Project 2A - World Data setup with Postgres + Postgis + Fastapi + Docker
-<<<<<<< HEAD
-# Date        :     09/08/2022 
-=======
 # Date        :     09/19/2022 
->>>>>>> 55fd6f850de9c67754ddc55c8032fa0e7ef0809d
 # Description :
                     Postgres + Postgis + Fastapi + Docker.
                     Using Pgadmin4 for Visualization tools to help debug problems.
