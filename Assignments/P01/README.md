@@ -116,9 +116,10 @@
   
 ### Files
 
-|   #   | File                               | Description                                     | Status                  |
-| :---: | ---------------------------------- | ----------------------------------------------- | ----------------------- |
-|   1   | [api.py](api.py)| api file file    | :ballot_box_with_check: |
-|   2   | [README.md](README.md) | README file | :ballot_box_with_check: |
-|   3   | [docker-compose.yml](docker-compose.yml) | docker-compose file | :ballot_box_with_check: |
-|   4   | [airports2.csv](airports2.csv) | airports2 file | :ballot_box_with_check: |
+|   #   | File                                     | Description                           | Status                  |
+| :---: | ---------------------------------------- | ------------------------------------- | ----------------------- |
+|   1   | [api.py](api.py)                         | api file file                         | :ballot_box_with_check: |
+|   2   | [README.md](README.md)                   | README file                           | :ballot_box_with_check: |
+|   3   | [docker-compose.yml](docker-compose.yml) | docker-compose file                   | :ballot_box_with_check: |
+|   4   | [airports2.csv](airports2.csv)           | airports2 file                        | :ballot_box_with_check: |
+|   5   | [airports2.sql](airports2.sql)           | sql to create your tables and indexes | :ballot_box_with_check: |
