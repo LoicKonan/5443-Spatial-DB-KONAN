@@ -10,6 +10,9 @@
 
 ## Loic Konan
 
+<img src="geo.png">
+
+
 ### Description
 
 - **Postgres + Postgis + Fastapi + Docker**.
@@ -29,7 +32,7 @@
   - elevation
   - gmt
   - tz (timezone)
-  - time_zone 
+  - time_zone
   - type
   - location (spatial geometry)
 
@@ -43,7 +46,6 @@
 <h2 align="center">The route above display the API documentation (Swagger). </h2>
 <img src="fastapi.png">
 <br /> <br /><br />
-
 
 <h1 align="center">GET Routes. </h1>
 
@@ -94,13 +96,14 @@
   - Click on the **play button** in the top right corner of the screen.
   - Or **uvicorn api:app --reload**
  <br /> <br />
- 
+
 - Run the following command to start the **docker container** (Only if you have Docker install) :
   
   ```bash
   docker-compose up -d
   ```
- <br /> 
+
+ <br />
 
 - Interact with the **API** using the following routes:
   
@@ -113,7 +116,6 @@
   
   <br /> <br />
 
-  
 ### Files
 
 |   #   | File                                     | Description                           | Status                  |
