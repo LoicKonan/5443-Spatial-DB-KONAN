@@ -45,7 +45,7 @@
 |   #   | File / Folder                             | Description                                                    | Status                  |
 | :---: | ----------------------------------------- | -------------------------------------------------------------- | ----------------------- |
 |   1   | [README.md](README.md)                    | README file                                                    | :ballot_box_with_check: |
-|   2   | [Datavisualization](./Datavisualiztion) | Display the output of each data as png                         | :ballot_box_with_check: |
+|   2   | [Datavisualization](./Datavisualization) | Display the output of each data as png                         | :ballot_box_with_check: |
 |   3   | [InputData](./InputData)               | Airports, Rails, Roads, States, Timezones, Military Base data. | :ballot_box_with_check: |
 |   4   | [Jsonfile](./Jsonfile)                  | All outputs in a json file.                                    | :ballot_box_with_check: |
 |   5   | [SQLTables](./SQLTables)                | SQL files are in this folder                                   | :ballot_box_with_check: |
