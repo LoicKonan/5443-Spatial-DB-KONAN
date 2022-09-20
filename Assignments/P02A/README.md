@@ -14,7 +14,7 @@
 
 ### Description
 
-- **Postgres + Postgis
+- **Postgres + Postgis**
 - Downloaded and created tables to hold lots of data **(Airports, Rails, Roads, States, Timezones, Military Base data)**.
 - Most of the data come from HERE(<https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html).com>
 - Every tables has an **index on the spatial column** in your table, using **shp2pgsql**.
@@ -23,8 +23,14 @@
 
 <br /><br />
 
-<h2 align="center">The route above display the API documentation (Swagger). </h2>
-<img src="fastapi.png">
+<h3 align="center">All Airports </h3>
+<img src="DataVisualization/allAirports.png">
+
+<br /><br />
+
+<h3 align="center">Planes Routes </h3>
+<img src="DataVisualization/planesroutes.png">
+
 <br /> <br /><br />
 
 ### Instructions
