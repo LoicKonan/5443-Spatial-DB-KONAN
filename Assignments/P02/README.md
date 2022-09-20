@@ -1,8 +1,8 @@
-## Project 02A - World Data with Postgres + Postgis
+## Project 02 - World Data with Postgres + Postgis
 
 - []: # **Language:** _markdown_
 - []: # **Path:** _README.md_
-- []: # **Title:** _Project 02A_
+- []: # **Title:** _Project 02_
 - []: # **Author:** _[Loic_Konan](Loic_Konan)_
 - []: # **Date:** _09/19/2022_
 - []: # **Description:** _World Data with Postgres + Postgis_
