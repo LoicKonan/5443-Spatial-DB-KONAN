@@ -1,4 +1,4 @@
-## Assignment 3  Missile Command (Part 1) 
+## Project 03  Missile Command (Part 1) 
 
 ### Loic Konan
 
