@@ -45,6 +45,15 @@
 |  18   | [https://postgis.net/docs/ST_Zmflag.html](https://postgis.net/docs/ST_Zmflag.html)                                               | ST_Zmflag         |
 |  19   | [http://postgis.net/docs/manual-1.5/ch04.html#PostGIS_Geography](http://postgis.net/docs/manual-1.5/ch04.html#PostGIS_Geography) | Geography Type    |
 |  20   | [https://postgis.net/docs/ST_LineInterpolatePoints.html](https://postgis.net/docs/ST_LineInterpolatePoints.html)                 |ST_LineInterpolatePoints|
+|  21   | [https://postgis.net/docs/ST_Envelope.html](https://postgis.net/docs/ST_Envelope.html)                                           | ST_Envelope |
+|  22   | [https://postgis.net/docs/ST_Dump.html](https://postgis.net/docs/ST_Dump.html)                                                   | ST_Dump |
+|  23   | [https://postgis.net/docs/ST_DumpPoints.html](https://postgis.net/docs/ST_DumpPoints.html)                                       | ST_DumpPoints |
+|  24   | [https://postgis.net/docs/ST_DumpRings.html](https://postgis.net/docs/ST_DumpRings.html)                                         | ST_DumpRings |
+|  25   | [https://postgis.net/docs/ST_DumpLines.html](https://postgis.net/docs/ST_DumpLines.html)                                         | ST_DumpLines |
+|  26   | [https://postgis.net/docs/ST_DumpPolygons.html](https://postgis.net/docs/ST_DumpPolygons.html)                                   | ST_DumpPolygons |
+|  27   | [https://postgis.net/docs/ST_AsGeoJSON.html](https://postgis.net/docs/ST_AsGeoJSON.html)                                         | ST_AsGeoJSON |
+|  32   | [https://postgis.net/docs/Find_SRID.html](https://postgis.net/docs/Find_SRID.html)                                               | Find_SRID |
+|  33   | [https://postgis.net/docs/ST_Area.html](https://postgis.net/docs/ST_Area.html)                                                   | ST_Area |
 
 ### Instructions
 
