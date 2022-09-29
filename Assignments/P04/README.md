@@ -42,7 +42,7 @@
 |  15   | [https://postgis.net/docs/Find_SRID.html](https://postgis.net/docs/Find_SRID.html)                                               | Find_SRID         |
 |  16   | [https://postgis.net/docs/ST_Area.html](https://postgis.net/docs/ST_Area.html)                                                   | ST_Area           |
 
-#### References Description
+### References Description
 
 - **ST_Buffer** - Returns a geometry that represents all points whose distance from this Geometry is less than or equal to distance.
 - **ST_Distance** - Returns the 2-dimensional cartesian minimum distance (based on spatial ref) between two geometries in projected units.
