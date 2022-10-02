@@ -92,8 +92,8 @@ async def docs_redirect():
     """
     ### Local api that has the following routes:\n
     
-    -   findAll
-    -   findOne
+    -   
+    -   
     
     """
     return RedirectResponse(url="/docs")
@@ -101,16 +101,37 @@ async def docs_redirect():
         
     
 # This api routes is used to display bounding box, and get the center of the bbox as well as the geometry.
-@app.get("/three_code")
+@app.get("/bbox")
 async def get_bbox():
     sql = """SELECT fullname,ST_AsText(ST_Envelope(geom)) bbox,  ST_AsText(ST_Centroid(ST_Envelope(geom))) bboxcenter,  ST_AsText(ST_Centroid(geom)) center
-    FROM us_mil ORDER BY fullname ASC"""
+                FROM us_mil ORDER BY fullname ASC"""
         
     with DatabaseCursor(".config.json") as cur:
         cur.execute(sql)
         return cur.fetchall()
 
 
+
+# This api routes is used to display interpolate points between two ends at 1 percent intervals:
+@app.get("/interpolate")
+async def get_interpolate():
+    sql = """SELECT ST_AsGeoJSON(
+                ST_LineInterpolatePoints('LINESTRING(-121.81640624999999 54.36775852406841,-86.396484375 19.72534224805787)', 0.01))"""
+                
+    with DatabaseCursor(".config.json") as cur:
+        cur.execute(sql)
+        return cur.fetchall()
+
+
+# This api routes is used to display Calculate the area of a geometry
+@app.get("/area")
+async def get_area():
+    sql = """SELECT fullname,ST_Area(geom::geography)* 0.00000038610 sqmiles 
+                FROM military_bases ORDER BY sqmiles DESC"""
+        
+    with DatabaseCursor(".config.json") as cur:
+        cur.execute(sql)
+        return cur.fetchall()
 
 
 
