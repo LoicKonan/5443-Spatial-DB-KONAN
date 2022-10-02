@@ -8,6 +8,7 @@
 """
 
 
+from re import S
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 import uvicorn
@@ -97,43 +98,17 @@ async def docs_redirect():
     """
     return RedirectResponse(url="/docs")
 
-
-# This api routes is used to display all the AIRPORTS in a specific three_code.
-@app.get("/three_code")
-async def airports2(fullname: str):
-    """
-    ### Display the data below from a specific City:\n
-    
-        -    A
         
-        """
-    sql = f"""SELECT name, city, country, Time_zone from airports2 
-              WHERE fullname = '{fullname}'"""
-
+    
+# This api routes is used to display bounding box, and get the center of the bbox as well as the geometry.
+@app.get("/three_code")
+async def get_bbox():
+    sql = """SELECT fullname,ST_AsText(ST_Envelope(geom)) bbox,  ST_AsText(ST_Centroid(ST_Envelope(geom))) bboxcenter,  ST_AsText(ST_Centroid(geom)) center
+    FROM us_mil ORDER BY fullname ASC"""
+        
     with DatabaseCursor(".config.json") as cur:
         cur.execute(sql)
         return cur.fetchall()
-    
-    
-
-# This api routes is used to display the total number of AIRPORTS from a specific country.
-@app.get("/Number of Airports in a Country")
-async def us_mil(id: int):
-    """
-    ### Display the total number of AIRPORTS from a specific country.
-    
-    """
-    sql = f"""SELECT count(*) from us_mil 
-              WHERE id = '{id}'"""
-
-    with DatabaseCursor(".config.json") as cur:
-        cur.execute(sql)
-        return cur.fetchone()
-    
-
-
-
-
 
 
 
