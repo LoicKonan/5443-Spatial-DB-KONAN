@@ -13,7 +13,7 @@ As stated in the previous assignment you will be defending a region against inco
 * Targets : Points defining the locations in which you are to defend
 * Batteries : Points defining the location of your missile batteries
 
-
+[data.geojson](data.geojson)
 
 ### `getArsenal`
 
