@@ -4,15 +4,40 @@
 
 #### Description
 
-- Missile Command was an 80's arcade game in which the player had to defend earth using anti-missile batteries that shot defensive "clouds" into the air (see animation).
-- We will create our own "no graphics" implementation of the game incorporating our spatial db concepts.
-- This first part of the game is to determine how many military bases, and to generate a series of missile paths which intersect with a military base and get shot down.
-- The second part we will attempt to do something in real time with missiles coming at different speeds and altitudes, and each military base will have limited reaction time, giving them a chance to get hit. This first part is only generating random paths and simple line v polygon intersection recognition.
+### `getRegion`
 
-#### Data
+This function takes a `Point` and returns the `Region` that contains that point. If the point is not in any region, it returns `None`.
+As stated in the previous assignment you will be defending a region against incoming missile attacks. The region you will defend will be assigned to you via an api call to `getRegion`. That call will return a geojson object with a list of features that will include:
 
-1. [US_Military_Base](US_Military_Bases) - This is a list of military bases in the US.
-2. Random Missile Paths
+* Boundary : 1 or more polygons defining your region
+* Targets : Points defining the locations in which you are to defend
+* Batteries : Points defining the location of your missile batteries
+
+
+
+### `getArsenal`
+
+This route will send back a set of missiles that you have to defend your region. Don't worry about dividing up the missiles up amongst the batteries, we will assume any missile from your arsenal can be fired from any missile battery in your region. Below are a list of missiles and their classifications.
+
+
+### Example Response
+
+```json
+{
+  "Atlas": 20,
+  "Harpoon": 13,
+  "Hellfire": 12,
+  "Javelin": 11,
+  "Minuteman": 9,
+  "Patriot": 9,
+  "Peacekeeper": 8,
+  "SeaSparrow": 8,
+  "Titan": 5,
+  "Tomahawk": 4,
+  "Trident": 1,
+  "total": 100
+}
+```
 
 ### Files
 
@@ -20,6 +45,15 @@
 | :---: | ------------------  | -------------------------------------------      |
 |   1   | [main.py](main.py)  | The main file with comments and description      |
 |   2   | [main.sql](main.sql)| The main sql file with comments and description  |
+|   3   | [US_Military_Bases](US_Military_Bases)| The main sql file with comments and description  |
+|   4   | [README.md](README.md)| The main sql file with comments and description  |
+|   5   | [missile.sql](missile.sql)  | The missile sql file with comments and description  |
+|   6   | [missile_blast.sql](missile_blast.sql)  | The missile blast sql file with comments and description  |
+|   7   | [missile_speed.sql](missile_speed.sql)  | The missile speed sql file with comments and description  |
+|   8   | [region.sql](region.sql)  | The region sql file with comments and description  |
+|   9   | [postApi.py](postApi.py)  | The postApi python file with comments and description  |
+|   10  | [callPostApi.py](callPostApi.py)  | The callPostApi python file with comments and description  |
+|   11  | [data.geo_json](data.geo_json)  | The data geo_json file with comments and description  |
 
 ### References
 
