@@ -5,6 +5,7 @@ import uvicorn  # used as local mini server
 import psycopg2 # used to connect to postgres (not used here)
 
 class MissileSol(BaseModel):
+    Id:   str   # id of group
     Lon1: float # starting X
     Lat1: float # starting Y
     Alt1: float # starting Z

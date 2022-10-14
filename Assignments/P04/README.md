@@ -43,17 +43,15 @@ This route will send back a set of missiles that you have to defend your region.
 
 |   #   | File                | Description                                      |
 | :---: | ------------------  | -------------------------------------------      |
-|   1   | [main.py](main.py)  | The main file with comments and description      |
-|   2   | [main.sql](main.sql)| The main sql file with comments and description  |
-|   3   | [US_Military_Bases](US_Military_Bases)| The main sql file with comments and description  |
-|   4   | [README.md](README.md)| The main sql file with comments and description  |
-|   5   | [missile.sql](missile.sql)  | The missile sql file with comments and description  |
-|   6   | [missile_blast.sql](missile_blast.sql)  | The missile blast sql file with comments and description  |
-|   7   | [missile_speed.sql](missile_speed.sql)  | The missile speed sql file with comments and description  |
-|   8   | [region.sql](region.sql)  | The region sql file with comments and description  |
-|   9   | [postApi.py](postApi.py)  | The postApi python file with comments and description  |
-|   10  | [callPostApi.py](callPostApi.py)  | The callPostApi python file with comments and description  |
-|   11  | [data.geo_json](data.geo_json)  | The data geo_json file with comments and description  |
+|   1   | [api.py](api.py)  | The main file with comments and description      |
+|   2   | [data.geojson](data.geojson)  | The geojson file with the region data            |
+|   3   | [README.md](README.md)  | The file that you are currently reading          |
+|   4   | [requirements.txt](requirements.txt)  | The requirements file for the project            |
+|   5   | [callPostApi.py](callPostApi.py)  | Call The Post file for the project                    |
+|   6   | [postApi.py](postApi.py)  | The postApi file for the project                     |
+|   7  |  [sql](./sql) | The sql folder with the sql files for the project |
+
+
 
 ### References
 
