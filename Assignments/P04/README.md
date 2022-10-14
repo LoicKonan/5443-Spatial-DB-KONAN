@@ -38,18 +38,18 @@ This route will send back a set of missiles that you have to defend your region.
   "total": 100
 }
 ```
-
+   
 ### Files
 
-|   #   | File                | Description                                      |
-| :---: | ------------------  | -------------------------------------------      |
-|   1   | [api.py](api.py)  | The main file with comments and description      |
-|   2   | [data.geojson](data.geojson)  | The geojson file with the region data            |
-|   3   | [README.md](README.md)  | The file that you are currently reading          |
-|   4   | [requirements.txt](requirements.txt)  | The requirements file for the project            |
-|   5   | [callPostApi.py](callPostApi.py)  | Call The Post file for the project                    |
-|   6   | [postApi.py](postApi.py)  | The postApi file for the project                     |
-|   7  |  [sql](./sql) | The sql folder with the sql files for the project |
+|   #   | File                | Description                                            |
+| :---: | ------------------  | -------------------------------------------            |
+|   1   | [api.py](api.py)  | The main file with comments and description              |
+|   2   | [data.geojson](data.geojson)  | The geojson file with the region data        |
+|   3   | [README.md](README.md)  | The file that you are currently reading            |
+|   4   | [requirements.txt](requirements.txt)  | The requirements file for the project|
+|   5   | [callPostApi.py](callPostApi.py)  | Call The Post file for the project       |
+|   6   | [postApi.py](postApi.py)  | The postApi file for the project                 |
+|   7   |  [sql](./sql) | The sql folder with the sql files for the project            |
 
 
 
