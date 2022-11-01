@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from pydantic import BaseModel  # to create class models
+from pydantic import BaseModel  
 from fastapi.responses import RedirectResponse
 import uvicorn
 import psycopg2
@@ -42,6 +42,7 @@ conn = DBQuery(".config.json")
 async def docs_redirect():
     """Api's base route that displays the information created above in the ApiInfo section."""
     return RedirectResponse(url="/docs")
+
 
 @app.get("/missileNext")
 def missileNext(lon:float=-98.12345, lat:float=34.2345, speed:float=333, bearing:float=270, time:int=1, drop:float=0.0 , geojson:bool=False):
@@ -123,109 +124,6 @@ def missilePath(d: str = None, buffer: float = 0):
         end = [bbox["l"] - buffer, y2]
 
     return [start, end]
-
-
-@app.get("/getArsenal")
-def getArsenal(id: str = None, total: int = 50):
-    """Returns a missile arsenal randomly generated weighted to
-        give more slower weaker missiles that fast and strong.
-    Params:
-        id (str) : id of the team
-        total (int) : total number of missiles to be issued
-    """
-    # names = list(missile_data["missiles"].keys())
-
-    # missiles = []
-
-    # i = len(names)*2
-    # for name in sorted(names):
-    #     print(name,i)
-    #     missiles.extend([name] * i)
-    #     print(len(missiles))
-    #     i -= 2
-
-    # random.shuffle(missiles)
-
-    # missileCount = {}
-
-    # sum = 0
-    # for name in names:
-    #     missileCount[name] = missiles[:total].count(name)
-
-    #     if missileCount[name] == 0:
-    #         missileCount[name] += 1
-    #         missileCount["Atlas"] -= 1
-
-    #     sum += missileCount[name]
-
-    # missileCount['total'] = sum
-    # return missileCount
-    pass
-
-
-@app.get("/radar_sweep")
-def radar_sweep(gid:str):
-    sql = """SELECT * FROM missile_attacking 
-    WHERE gid like '{gid}'
-    ORDER BY time
-    """
-    #res = conn.queryMany(sql)
-
-    print(time.time())
-
-    return {"hello":gid,"time":time.time()}
-
-
-@app.get("/numRegions")
-def region():
-    sql = "SELECT distinct(gid) FROM regions ORDER BY gid"
-    res = conn.queryMany(sql)
-
-    return res
-
-
-@app.get("/region")
-def region(gid: int, cid: int):
-    """ Returns a region geojson based on the gid and cid passed in.
-    ### Params:
-        gid (int) : This is the group id where 4 = four regions up to 8 for eight regions.
-        cid (int) : This is a value `0-(gid-1)` numbering the region.
-    ### Returns:
-        (geojson) : polygon or multipolygon representing the region
-    """
-
-    # if cid >= gid:
-    #     return {"Error": f"cid must be between 0 and {gid-1} for a gid of {gid}!"}
-
-
-    sql = f"""
-    SELECT geom::json as region FROM public.regions_simple 
-    WHERE gid = {gid} AND cid = {cid}
-    """
-
-    res = conn.queryOne(sql, noPagination=True)
-
-    # print(type(res['data']))
-    # print(len(res['data']))
-    # if isinstance(res['data'], list):
-    #     with open('zzz2.json','w') as f:
-    #         json.dump(res['data'][0][0],f,indent=4)
-
-    fc = {
-        "type": "FeatureCollection",
-        "features": [
-            {
-                "type": "Feature",
-                "properties": {},
-                "geometry": {
-                    "type": res["data"][0][0]["type"],
-                    "coordinates": res["data"][0][0]["coordinates"],
-                },
-            }
-        ],
-    }
-
-    return fc
 
 
 @app.get("/missileInfo")
