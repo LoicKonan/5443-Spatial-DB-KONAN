@@ -97,9 +97,9 @@ def missilePath(d: str = None, buffer: float = 0):
     """
     bbox = {
         "l": -124.7844079,  # left
-        "r": -66.9513812,  # right
-        "t": 49.3457868,  # top
-        "b": 24.7433195,  # bottom
+        "r": -66.9513812,   # right
+        "t": 49.3457868,    # top
+        "b": 24.7433195,    # bottom
     }
 
     directions = ["N", "S", "E", "W"]
@@ -109,8 +109,8 @@ def missilePath(d: str = None, buffer: float = 0):
 
     x1 = ((abs(bbox["l"]) - abs(bbox["r"])) * random.random() + abs(bbox["r"])) * -1
     x2 = ((abs(bbox["l"]) - abs(bbox["r"])) * random.random() + abs(bbox["r"])) * -1
-    y1 = (abs(bbox["t"]) - abs(bbox["b"])) * random.random() + abs(bbox["b"])
-    y2 = (abs(bbox["t"]) - abs(bbox["b"])) * random.random() + abs(bbox["b"])
+    y1 = (abs(bbox["t"])  - abs(bbox["b"])) * random.random() + abs(bbox["b"])
+    y2 = (abs(bbox["t"])  - abs(bbox["b"])) * random.random() + abs(bbox["b"])
 
     if d == "N":
         start = [x1, bbox["b"] - buffer]
@@ -309,4 +309,4 @@ Note:
     The right side (app) is the bearingiable name of the FastApi instance declared at the top of the file.
 """
 if __name__ == "__main__":
-    uvicorn.run("api:app", host="127.0.0.1", port=8181, log_level="debug", reload=True)
+    uvicorn.run("api:app", host=" http://missilecommand.live:8080/docs", port=8080, log_level="debug", reload=True)

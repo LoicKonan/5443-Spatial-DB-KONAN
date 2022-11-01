@@ -127,7 +127,7 @@ async def get_interpolate():
 @app.get("/area")
 async def get_area():
     sql = """SELECT fullname,ST_Area(geom::geography)* 0.00000038610 sqmiles 
-                FROM military_bases ORDER BY sqmiles DESC"""
+                FROM military_bases ORDER BY sq-miles DESC"""
         
     with DatabaseCursor(".config.json") as cur:
         cur.execute(sql)
