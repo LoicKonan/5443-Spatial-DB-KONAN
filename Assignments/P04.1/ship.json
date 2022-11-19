@@ -1,0 +1,3321 @@
+[
+    {
+        "id": 0,
+        "category": "Destroyer",
+        "shipClass": "Z5 class",
+        "length": 150,
+        "width": 25,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 20
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 50
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 80
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4000
+                },
+                "pos": 1200
+            }
+        ],
+        "armor": {
+            "hull": 20,
+            "deck": 15
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 1,
+        "category": "Destroyer",
+        "shipClass": "Z5 class",
+        "length": 150,
+        "width": 25,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 1600
+                },
+                "pos": 20
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 50
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 80
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 1200
+            }
+        ],
+        "armor": {
+            "hull": 20,
+            "deck": 15
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 2,
+        "category": "Destroyer",
+        "shipClass": "Benson class",
+        "length": 120,
+        "width": 19,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4000
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 15
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 55
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 90
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 95
+            }
+        ],
+        "armor": {
+            "hull": 18,
+            "deck": 13
+        },
+        "speed": 38,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 3,
+        "category": "Destroyer",
+        "shipClass": "Benson class",
+        "length": 120,
+        "width": 19,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2400
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 15
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 55
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 90
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2800
+                },
+                "pos": 95
+            }
+        ],
+        "armor": {
+            "hull": 18,
+            "deck": 13
+        },
+        "speed": 38,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 4,
+        "category": "Destroyer",
+        "shipClass": "Fletcher class",
+        "length": 115,
+        "width": 20,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 5600
+                },
+                "pos": 30
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 60
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 90
+            }
+        ],
+        "armor": {
+            "hull": 19,
+            "deck": 14
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 5,
+        "category": "Destroyer",
+        "shipClass": "Fletcher class",
+        "length": 115,
+        "width": 20,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3000
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 30
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 60
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 90
+            }
+        ],
+        "armor": {
+            "hull": 19,
+            "deck": 14
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 6,
+        "category": "Destroyer",
+        "shipClass": "Z5 class",
+        "length": 150,
+        "width": 25,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 6400
+                },
+                "pos": 20
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 50
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 80
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4000
+                },
+                "pos": 1200
+            }
+        ],
+        "armor": {
+            "hull": 20,
+            "deck": 15
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 7,
+        "category": "Destroyer",
+        "shipClass": "Z5 class",
+        "length": 150,
+        "width": 25,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 20
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 50
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 80
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4200
+                },
+                "pos": 1200
+            }
+        ],
+        "armor": {
+            "hull": 20,
+            "deck": 15
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 8,
+        "category": "Destroyer",
+        "shipClass": "Fletcher class",
+        "length": 115,
+        "width": 20,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4200
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 30
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 60
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 90
+            }
+        ],
+        "armor": {
+            "hull": 19,
+            "deck": 14
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 9,
+        "category": "Destroyer",
+        "shipClass": "Fletcher class",
+        "length": 115,
+        "width": 20,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 6400
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4200
+                },
+                "pos": 30
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 60
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 90
+            }
+        ],
+        "armor": {
+            "hull": 19,
+            "deck": 14
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 10,
+        "category": "Destroyer",
+        "shipClass": "Fletcher class",
+        "length": 115,
+        "width": 20,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 5600
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 30
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 60
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 90
+            }
+        ],
+        "armor": {
+            "hull": 19,
+            "deck": 14
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 11,
+        "category": "Destroyer",
+        "shipClass": "Benson class",
+        "length": 120,
+        "width": 19,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2400
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 15
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 55
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 90
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2400
+                },
+                "pos": 95
+            }
+        ],
+        "armor": {
+            "hull": 18,
+            "deck": 13
+        },
+        "speed": 38,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 12,
+        "category": "Destroyer",
+        "shipClass": "Z5 class",
+        "length": 150,
+        "width": 25,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3000
+                },
+                "pos": 20
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 50
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 80
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4200
+                },
+                "pos": 1200
+            }
+        ],
+        "armor": {
+            "hull": 20,
+            "deck": 15
+        },
+        "speed": 35,
+        "turn_radius": 30,
+        "location": null
+    },
+    {
+        "id": 13,
+        "category": "Battle Ship",
+        "shipClass": "Beto class",
+        "length": 180,
+        "width": 31,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 20
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3000
+                },
+                "pos": 70
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3600
+                },
+                "pos": 160
+            }
+        ],
+        "armor": {
+            "hull": 305,
+            "deck": 178
+        },
+        "speed": 28,
+        "turn_radius": 25,
+        "location": null
+    },
+    {
+        "id": 14,
+        "category": "Battle Ship",
+        "shipClass": "Vikrant class",
+        "length": 270,
+        "width": 46,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2000
+                },
+                "pos": 100
+            },
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 6400
+                },
+                "pos": 400
+            },
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2800
+                },
+                "pos": 800
+            }
+        ],
+        "armor": {
+            "hull": 406,
+            "deck": 208
+        },
+        "speed": 28,
+        "turn_radius": 25,
+        "location": null
+    },
+    {
+        "id": 15,
+        "category": "Battle Ship",
+        "shipClass": "Yamato class",
+        "length": 263,
+        "width": 45,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2800
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 1600
+                },
+                "pos": 70
+            },
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 130
+            },
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 1600
+                },
+                "pos": 190
+            },
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 250
+            }
+        ],
+        "armor": {
+            "hull": 410,
+            "deck": 226
+        },
+        "speed": 27,
+        "turn_radius": 25,
+        "location": null
+    },
+    {
+        "id": 16,
+        "category": "Battle Ship",
+        "shipClass": "Vikrant class",
+        "length": 270,
+        "width": 46,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 100
+            },
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2400
+                },
+                "pos": 400
+            },
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 6400
+                },
+                "pos": 800
+            }
+        ],
+        "armor": {
+            "hull": 406,
+            "deck": 208
+        },
+        "speed": 28,
+        "turn_radius": 25,
+        "location": null
+    },
+    {
+        "id": 17,
+        "category": "Battle Ship",
+        "shipClass": "DIvoire class",
+        "length": 210,
+        "width": 36,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 40
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4000
+                },
+                "pos": 70
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 180
+            }
+        ],
+        "armor": {
+            "hull": 305,
+            "deck": 191
+        },
+        "speed": 27,
+        "turn_radius": 25,
+        "location": null
+    },
+    {
+        "id": 18,
+        "category": "Battle Ship",
+        "shipClass": "Kılıç class",
+        "length": 240,
+        "width": 41,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 60
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 120
+            },
+            {
+                "gun": {
+                    "name": "Mark8",
+                    "info": "400 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 400,
+                    "ammoType": [
+                        "MK13"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK13",
+                                "mm": 400,
+                                "kg": 1165
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3600
+                },
+                "pos": 180
+            }
+        ],
+        "armor": {
+            "hull": 305,
+            "deck": 203
+        },
+        "speed": 33,
+        "turn_radius": 25,
+        "location": null
+    },
+    {
+        "id": 19,
+        "category": "Battle Ship",
+        "shipClass": "Vikrant class",
+        "length": 270,
+        "width": 46,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4800
+                },
+                "pos": 100
+            },
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 600,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4200
+                },
+                "pos": 400
+            },
+            {
+                "gun": {
+                    "name": "Mark7",
+                    "info": "450 mm deck mounted gun. Each Mark7 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 450,
+                    "ammoType": [
+                        "MK3"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK3",
+                                "mm": 450,
+                                "kg": 1455
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 5600
+                },
+                "pos": 800
+            }
+        ],
+        "armor": {
+            "hull": 406,
+            "deck": 208
+        },
+        "speed": 28,
+        "turn_radius": 25,
+        "location": null
+    },
+    {
+        "id": 20,
+        "category": "Battle Ship",
+        "shipClass": "Yamato class",
+        "length": 263,
+        "width": 45,
+        "torpedoLaunchers": null,
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 6400
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 1600
+                },
+                "pos": 70
+            },
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 2400
+                },
+                "pos": 130
+            },
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 400,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 3200
+                },
+                "pos": 190
+            },
+            {
+                "gun": {
+                    "name": "Mark5",
+                    "info": "475 mm deck mounted gun. Each Mark5 has 3 barrels that can shoot simultaneuously.",
+                    "mm": 475,
+                    "ammoType": [
+                        "MK1"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 800,
+                            "type": {
+                                "name": "MK1",
+                                "mm": 475,
+                                "kg": 1600
+                            }
+                        }
+                    ],
+                    "rof": 3,
+                    "propellant": 4000
+                },
+                "pos": 250
+            }
+        ],
+        "armor": {
+            "hull": 410,
+            "deck": 226
+        },
+        "speed": 27,
+        "turn_radius": 25,
+        "location": null
+    },
+    {
+        "id": 21,
+        "category": "PT Boat",
+        "shipClass": "Goddess of War",
+        "length": 24,
+        "width": 7,
+        "torpedoLaunchers": [
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK39",
+                    "guidance": "wire guided",
+                    "diameter": 533,
+                    "speed": 40,
+                    "kg": 1000,
+                    "warheadSize": 175,
+                    "range": 13000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "starboard",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK35",
+                    "guidance": "accoustic",
+                    "diameter": 533,
+                    "speed": 60,
+                    "kg": 1300,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            },
+            {
+                "location": "astern",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK31",
+                    "guidance": "accoustic",
+                    "diameter": 570,
+                    "speed": 50,
+                    "kg": 1000,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK31",
+                    "guidance": "accoustic",
+                    "diameter": 570,
+                    "speed": 50,
+                    "kg": 1000,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            }
+        ],
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark15",
+                    "info": "35 mm gatlin gun. ",
+                    "mm": 35,
+                    "ammoType": [
+                        "SAPHEI/SD"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "SAPHEI/SD",
+                                "mm": 35,
+                                "kg": 0.55,
+                                "ms": 1055,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 200,
+                    "propellant": 0
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 30
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 40
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 50
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 70
+            }
+        ],
+        "armor": {
+            "hull": 18,
+            "deck": 13
+        },
+        "speed": 80,
+        "turn_radius": 45,
+        "location": null
+    },
+    {
+        "id": 22,
+        "category": "PT Boat",
+        "shipClass": "Goddess of War",
+        "length": 24,
+        "width": 7,
+        "torpedoLaunchers": [
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK31",
+                    "guidance": "accoustic",
+                    "diameter": 570,
+                    "speed": 50,
+                    "kg": 1000,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "starboard",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK35",
+                    "guidance": "accoustic",
+                    "diameter": 533,
+                    "speed": 60,
+                    "kg": 1300,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            },
+            {
+                "location": "astern",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK39",
+                    "guidance": "wire guided",
+                    "diameter": 533,
+                    "speed": 40,
+                    "kg": 1000,
+                    "warheadSize": 175,
+                    "range": 13000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK39",
+                    "guidance": "wire guided",
+                    "diameter": 533,
+                    "speed": 40,
+                    "kg": 1000,
+                    "warheadSize": 175,
+                    "range": 13000
+                }
+            }
+        ],
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark15",
+                    "info": "35 mm gatlin gun. ",
+                    "mm": 35,
+                    "ammoType": [
+                        "SAPHEI/SD"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "SAPHEI/SD",
+                                "mm": 35,
+                                "kg": 0.55,
+                                "ms": 1055,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 200,
+                    "propellant": 0
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 30
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 40
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 750,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 50
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 70
+            }
+        ],
+        "armor": {
+            "hull": 18,
+            "deck": 13
+        },
+        "speed": 80,
+        "turn_radius": 45,
+        "location": null
+    },
+    {
+        "id": 23,
+        "category": "PT Boat",
+        "shipClass": "Goddess of War",
+        "length": 24,
+        "width": 7,
+        "torpedoLaunchers": [
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK35",
+                    "guidance": "accoustic",
+                    "diameter": 533,
+                    "speed": 60,
+                    "kg": 1300,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "starboard",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK42",
+                    "guidance": null,
+                    "diameter": 570,
+                    "speed": 102,
+                    "kg": 1814,
+                    "warheadSize": 363,
+                    "range": 25000
+                }
+            },
+            {
+                "location": "astern",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK35",
+                    "guidance": "accoustic",
+                    "diameter": 533,
+                    "speed": 60,
+                    "kg": 1300,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK35",
+                    "guidance": "accoustic",
+                    "diameter": 533,
+                    "speed": 60,
+                    "kg": 1300,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            }
+        ],
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark15",
+                    "info": "35 mm gatlin gun. ",
+                    "mm": 35,
+                    "ammoType": [
+                        "SAPHEI/SD"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "SAPHEI/SD",
+                                "mm": 35,
+                                "kg": 0.55,
+                                "ms": 1055,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 200,
+                    "propellant": 0
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 30
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 40
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 50
+            },
+            {
+                "gun": {
+                    "name": "Mark11",
+                    "info": "120 mm deck mounted gun. Each Mark11 has 2 barrels that can shoot simultaneuously.",
+                    "mm": 120,
+                    "ammoType": [
+                        "120 IM HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "120 IM HE",
+                                "mm": 120,
+                                "kg": 17,
+                                "ms": 1030,
+                                "explosive": 8
+                            }
+                        }
+                    ],
+                    "rof": 2,
+                    "propellant": 0
+                },
+                "pos": 70
+            }
+        ],
+        "armor": {
+            "hull": 18,
+            "deck": 13
+        },
+        "speed": 80,
+        "turn_radius": 45,
+        "location": null
+    },
+    {
+        "id": 24,
+        "category": "PT Boat",
+        "shipClass": "Dragon Lady",
+        "length": 24,
+        "width": 7,
+        "torpedoLaunchers": [
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK31",
+                    "guidance": "accoustic",
+                    "diameter": 570,
+                    "speed": 50,
+                    "kg": 1000,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "starboard",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK42",
+                    "guidance": null,
+                    "diameter": 570,
+                    "speed": 102,
+                    "kg": 1814,
+                    "warheadSize": 363,
+                    "range": 25000
+                }
+            },
+            {
+                "location": "astern",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK42",
+                    "guidance": null,
+                    "diameter": 570,
+                    "speed": 102,
+                    "kg": 1814,
+                    "warheadSize": 363,
+                    "range": 25000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK35",
+                    "guidance": "accoustic",
+                    "diameter": 533,
+                    "speed": 60,
+                    "kg": 1300,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            }
+        ],
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark17",
+                    "info": "25mm Chain gun",
+                    "mm": 25,
+                    "ammoType": [
+                        "APEX"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "APEX",
+                                "mm": 25,
+                                "kg": 0.222,
+                                "ms": 970,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 250,
+                    "propellant": 0
+                },
+                "pos": 3
+            },
+            {
+                "gun": {
+                    "name": "Mark15",
+                    "info": "35 mm gatlin gun. ",
+                    "mm": 35,
+                    "ammoType": [
+                        "SAPHEI/SD"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "SAPHEI/SD",
+                                "mm": 35,
+                                "kg": 0.55,
+                                "ms": 1055,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 200,
+                    "propellant": 0
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark15",
+                    "info": "35 mm gatlin gun. ",
+                    "mm": 35,
+                    "ammoType": [
+                        "SAPHEI/SD"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "SAPHEI/SD",
+                                "mm": 35,
+                                "kg": 0.55,
+                                "ms": 1055,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 200,
+                    "propellant": 0
+                },
+                "pos": 13
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 17
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 21
+            }
+        ],
+        "armor": {
+            "hull": 18,
+            "deck": 13
+        },
+        "speed": 74,
+        "turn_radius": 45,
+        "location": null
+    },
+    {
+        "id": 25,
+        "category": "PT Boat",
+        "shipClass": "Dragon Lady",
+        "length": 24,
+        "width": 7,
+        "torpedoLaunchers": [
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK39",
+                    "guidance": "wire guided",
+                    "diameter": 533,
+                    "speed": 40,
+                    "kg": 1000,
+                    "warheadSize": 175,
+                    "range": 13000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "starboard",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK42",
+                    "guidance": null,
+                    "diameter": 570,
+                    "speed": 102,
+                    "kg": 1814,
+                    "warheadSize": 363,
+                    "range": 25000
+                }
+            },
+            {
+                "location": "astern",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK39",
+                    "guidance": "wire guided",
+                    "diameter": 533,
+                    "speed": 40,
+                    "kg": 1000,
+                    "warheadSize": 175,
+                    "range": 13000
+                }
+            },
+            {
+                "location": "bow",
+                "side": "port",
+                "facing": "ahead",
+                "torpedos": {
+                    "name": "MK35",
+                    "guidance": "accoustic",
+                    "diameter": 533,
+                    "speed": 60,
+                    "kg": 1300,
+                    "warheadSize": 150,
+                    "range": 15000
+                }
+            }
+        ],
+        "armament": [
+            {
+                "gun": {
+                    "name": "Mark17",
+                    "info": "25mm Chain gun",
+                    "mm": 25,
+                    "ammoType": [
+                        "APEX"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "APEX",
+                                "mm": 25,
+                                "kg": 0.222,
+                                "ms": 970,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 250,
+                    "propellant": 0
+                },
+                "pos": 3
+            },
+            {
+                "gun": {
+                    "name": "Mark15",
+                    "info": "35 mm gatlin gun. ",
+                    "mm": 35,
+                    "ammoType": [
+                        "SAPHEI/SD"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 2250,
+                            "type": {
+                                "name": "SAPHEI/SD",
+                                "mm": 35,
+                                "kg": 0.55,
+                                "ms": 1055,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 200,
+                    "propellant": 0
+                },
+                "pos": 10
+            },
+            {
+                "gun": {
+                    "name": "Mark15",
+                    "info": "35 mm gatlin gun. ",
+                    "mm": 35,
+                    "ammoType": [
+                        "SAPHEI/SD"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "SAPHEI/SD",
+                                "mm": 35,
+                                "kg": 0.55,
+                                "ms": 1055,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 200,
+                    "propellant": 0
+                },
+                "pos": 13
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 17
+            },
+            {
+                "gun": {
+                    "name": "Mark13",
+                    "info": "57 mm gatlin gun. ",
+                    "mm": 57,
+                    "ammoType": [
+                        "L/70 HE"
+                    ],
+                    "ammo": [
+                        {
+                            "count": 1500,
+                            "type": {
+                                "name": "L/70 HE",
+                                "mm": 57,
+                                "kg": 2.4,
+                                "ms": 1020,
+                                "explosive": null
+                            }
+                        }
+                    ],
+                    "rof": 150,
+                    "propellant": 0
+                },
+                "pos": 21
+            }
+        ],
+        "armor": {
+            "hull": 18,
+            "deck": 13
+        },
+        "speed": 74,
+        "turn_radius": 45,
+        "location": null
+    }
+]
