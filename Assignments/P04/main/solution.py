@@ -203,5 +203,10 @@ Note:
     The left side (api) is the name of this file (api.py without the extension)
     The right side (app) is the bearingiable name of the FastApi instance declared at the top of the file.
 """
-if __name__ == "__main__":
-    uvicorn.run("api:app", host=" http://missilecommand.live:8080/docs", port=8080, log_level="debug", reload=True)
+
+@app.post("/missileSolution/")
+async def create_item(missSol: MissileSol):
+    print(missSol)
+    return missSol
+
+uvicorn.run("api:app", host=" http://missilecommand.live:8080/docs", port=8080, log_level="debug", reload=True)
