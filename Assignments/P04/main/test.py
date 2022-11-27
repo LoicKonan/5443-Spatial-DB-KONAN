@@ -1,22 +1,13 @@
-from datetime import datetime
-import json
-from operator import truediv
 from fastapi import FastAPI
-import time
-import requests
+from fastapi.responses import RedirectResponse
 import uvicorn
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import RedirectResponse, HTMLResponse
 import psycopg2
-import pprint as pp
+import json
 
-
-app = FastAPI()
-
-url = "http://missilecommand.live:8080/RADAR_SWEEP"
 
 class DatabaseCursor(object):
-    """https://stackoverflow.com/questions/32812463/setting-schema-for-all-queries-of-a-connection-in-psycopg2-getting-race-conditi
-    https://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit
-    """
 
     def __init__(self, conn_config_file):
         with open(conn_config_file) as config_file:
@@ -51,119 +42,77 @@ class DatabaseCursor(object):
         self.conn.commit()
         self.conn.close()
 
-def get_sec(time_str):
-    """Get seconds from time."""
-    h, m, s = time_str.split(':')
-    return (int(h) * 3600 + int(m) * 60 + int(s))
+
+"""
+CREATE TABLE region (name text, geom geometry(multipolygon,4326));
+
+CREATE TABLE arsenal ();
+
+"""
 
 
-def radar_sweep():
-    while(True):
-        
-        time.sleep(3.5)
+def create_arsenal_table(name, insert_names, vals):
+    name = str(name).replace("[", " ")
+    name = name.replace("]", " ")
+    name = name.replace("\'", " ")
+    insert_names = str(insert_names).replace("[", " ")
+    insert_names = insert_names.replace("]", " ")
+    insert_names = insert_names.replace("\'", " ")
+    vals = str(vals).replace("[", " ")
+    vals = vals.replace("]", " ")
 
-        with open("temp.json", "w") as f:
-            register_region = requests.get(url)
-            json.dump(register_region.json(), f, indent=4)
-        
-
-        with open("temp.json", "r") as f:
-            data = json.loads(f.read())
-            count = 0
-            for i in data["features"]:
-            
-                mid = i["id"]
-                longitue = i["geometry"]["coordinates"][0]
-                latitude = i["geometry"]["coordinates"][1]
-                bearing = i["properties"]["bearing"]
-                altitude = i["properties"]["altitude"]
-                currents_time = get_sec(i["properties"]["current_time"])
-                #test = i["properties"]["missile_type"]
-
-                sql = f"""INSERT INTO sweep(mid, Latitude, Longitude, bearing, altitude, currents_time) VALUES ({mid},{longitue}, {latitude}, {bearing}, {altitude}, {currents_time});
-                
-                """
-
-                count+=1
-                with DatabaseCursor(".config.json") as cur:
-                    cur.execute(sql)
-                    #answer = cur.fetchall()
-        
-
-
-        #print(r.text)
-
-def current_time():
-    return get_sec(datetime.now())
-
-
-##############################################
-
-def change_in_time():
-    sys_time = current_time()
-    calculation = sys_time - x
-    return calculation
-
-
-
-def interpolation_point(lon1: float = -98.48, lat1: float = 19.88, altitude1: float =  10000, lon2: float = -95.93, lat2: float = 36.14,   altitude2: int = 0):
-    sql = f"""
-     SELECT ST_AsText(ST_LineInterpolatePoints('LINESTRING({lon1} {lat1} {altitude1}, {lon2} {lat2} {altitude2})', 0.01)); 
-    
+    create_arsenal = f"""
+    CREATE TABLE arsenal ({names});
+       
     """
-    with DatabaseCursor(".config.json") as cur:
-        cur.execute(sql)
-        answer = cur.fetchall()
 
-    return answer
+    insert_value = f"""
+    INSERT INTO arsenal ({insert_names})
+    VALUES ({vals}) 
+    """
+
+    return create_arsenal, insert_value
+
+def create_region_table(name, geom):
+    name = str(name).replace("[", " ")
+    name = name.replace("]", " ")
+    name = name.replace("\'", " ")
+    geom = str(geom).replace("[", " ")
+    geom = geom.replace("]", " ")
+
+    create_region = f"""
+    CREATE TABLE region (name text, geom geometry(multipolygon,4326));
+    INSERT INTO region (name, geom)
+    VALUES ({name}, {geom});
+    """
     
-
-def speed():
-    pass
-
-def distance():
-    sql = """
-    select ST_distance(St_MakePoint(-98.48, 19.88, 10000)::geography,ST_MakePoint( -95.93, 36.14, 0)::geography);
+    insert_value = f"""
+    INSERT INTO region ({name})
+    VALUES ({geom})
     
     """
 
-    with DatabaseCursor(".config.json") as cur:
-        cur.execute(sql)
-        answer = cur.fetchall()
-
-    return answer
-
-
-"""
-Drop exisiting
-Create a table with the values from the radar sweep
-Update Table
-
-"""
-
-drop_table = "DROP TABLE  IF EXISTS radar_sweep;"
-
-create_table = """
-
-CREATE TABLE radar_sweep (
-  
-  id int NOT NULL,
-  Latitude float ,
-  Longitude float,
-  bearing float,
-  altitude float,
-  currents_time float,
-  geom GEOMETRY(POINT, 4326),
-  CONSTRAINT radar_sweep_pkey PRIMARY KEY (id)
-);
-
-UPDATE radar_sweep
-SET location = ST_SetSRID(ST_MakePoint(Longitude,Latitude), 4326);
-
-"""
-
-
+    return create_region , insert_value
 
 if __name__ == "__main__":
-    radar_sweep()
-   
+
+    #create the table and insert the values
+    with open("region.json", "r") as f:
+        data = json.load(f)
+        name = data["name"]
+        geom = data["geom"]
+        create_region, insert_value = create_region_table(name, geom)
+        print(create_region)
+        print(insert_value)
+        for i in range(len(name)):
+            with DatabaseCursor(".config.json") as cur:
+                cur.execute(create_region)
+                cur.execute(insert_value)
+        
+            
+    
+    
+            
+        
+        
+
