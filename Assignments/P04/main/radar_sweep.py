@@ -16,6 +16,6 @@ if __name__=='__main__':
         time.sleep(5)
         missiles = requests.get(url)
 
-        with open('missiles.json', 'w') as f:
+        with open('incomingmissiles1.json', 'w') as f:
             json.dump(missiles.json(), f, indent=4)
             print(missiles.text)
