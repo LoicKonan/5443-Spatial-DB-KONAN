@@ -13,7 +13,7 @@ url = "http://missilecommand.live:8080/RADAR_SWEEP"
 if __name__=='__main__':
 
     while(True):
-        time.sleep(1)
+        time.sleep(5)
         missiles = requests.get(url)
 
         with open('missiles.json', 'w') as f:

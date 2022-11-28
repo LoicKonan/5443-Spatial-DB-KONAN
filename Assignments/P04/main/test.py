@@ -8,7 +8,6 @@ import json
 
 
 class DatabaseCursor(object):
-
     def __init__(self, conn_config_file):
         with open(conn_config_file) as config_file:
             self.conn_config = json.load(config_file)
@@ -51,68 +50,77 @@ CREATE TABLE arsenal ();
 """
 
 
-def create_arsenal_table(name, insert_names, vals):
-    name = str(name).replace("[", " ")
-    name = name.replace("]", " ")
-    name = name.replace("\'", " ")
-    insert_names = str(insert_names).replace("[", " ")
-    insert_names = insert_names.replace("]", " ")
-    insert_names = insert_names.replace("\'", " ")
-    vals = str(vals).replace("[", " ")
-    vals = vals.replace("]", " ")
+# def create_arsenal_table(name, insert_names, vals):
+#     name = str(name).replace("[", " ")
+#     name = name.replace("]", " ")
+#     name = name.replace("'", " ")
+#     insert_names = str(insert_names).replace("[", " ")
+#     insert_names = insert_names.replace("]", " ")
+#     insert_names = insert_names.replace("'", " ")
+#     vals = str(vals).replace("[", " ")
+#     vals = vals.replace("]", " ")
 
-    create_arsenal = f"""
-    CREATE TABLE arsenal ({names});
+#     create_arsenal = f"""
+#     CREATE TABLE arsenal ({names});
        
-    """
+#     """
 
-    insert_value = f"""
-    INSERT INTO arsenal ({insert_names})
-    VALUES ({vals}) 
-    """
+#     insert_value = f"""
+#     INSERT INTO arsenal ({insert_names})
+#     VALUES ({vals}) 
+#     """
 
-    return create_arsenal, insert_value
+#     return create_arsenal, insert_value
 
-def create_region_table(name, geom):
-    name = str(name).replace("[", " ")
-    name = name.replace("]", " ")
-    name = name.replace("\'", " ")
-    geom = str(geom).replace("[", " ")
-    geom = geom.replace("]", " ")
-
-    create_region = f"""
-    CREATE TABLE region (name text, geom geometry(multipolygon,4326));
-    INSERT INTO region (name, geom)
-    VALUES ({name}, {geom});
-    """
-    
-    insert_value = f"""
-    INSERT INTO region ({name})
-    VALUES ({geom})
-    
-    """
-
-    return create_region , insert_value
 
 if __name__ == "__main__":
 
-    #create the table and insert the values
     with open("region.json", "r") as f:
-        data = json.load(f)
-        name = data["name"]
-        geom = data["geom"]
-        create_region, insert_value = create_region_table(name, geom)
-        print(create_region)
-        print(insert_value)
-        for i in range(len(name)):
-            with DatabaseCursor(".config.json") as cur:
-                cur.execute(create_region)
-                cur.execute(insert_value)
-        
-            
-    
-    
-            
-        
-        
+        data = json.loads(f.read())
+        names = []
+        insert_names = []
+        vals = []
+        id = data["id"]
+        for key, value in data["arsenal"].items():
+            names.append(key + " VARCHAR(128)")
+            insert_names.append(key)
+            vals.append(value)
+            # print(key, value)
 
+        for i in data["region"]["features"]:
+            # print(i)
+            geom = str(i["geometry"]).replace("'", '"')
+
+        # print(geom)
+
+        # print(names)
+        sql = f"""
+        INSERT INTO region (rid, geom)
+        VALUES ({id}, ST_GeomFromGeoJSON('{geom}')) 
+        
+        """
+        # create_arsenal_table(names, insert_names, vals)
+
+        names = str(names).replace("[", " ")
+        names = names.replace("]", " ")
+        names = names.replace("'", " ")
+        insert_names = str(insert_names).replace("[", " ")
+        insert_names = insert_names.replace("]", " ")
+        insert_names = insert_names.replace("'", " ")
+        vals = str(vals).replace("[", " ")
+        vals = vals.replace("]", " ")
+        sql2 = f"""
+        CREATE TABLE arsenal ({names});
+        """
+
+        sql3 = f"""
+        INSERT INTO arsenal ({insert_names})
+        VALUES ({vals}) 
+        """
+        print(sql3)
+        print(sql2)
+        with DatabaseCursor(".config.json") as cur:
+            res = cur.execute(sql)
+            answer = cur.fetchall()
+
+            print(answer)
