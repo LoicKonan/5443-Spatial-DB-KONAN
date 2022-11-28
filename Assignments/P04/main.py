@@ -42,37 +42,6 @@ class DatabaseCursor(object):
         self.conn.close()
 
 
-"""
-CREATE TABLE region (name text, geom geometry(multipolygon,4326));
-
-CREATE TABLE arsenal ();
-
-"""
-
-
-# def create_arsenal_table(name, insert_names, vals):
-#     name = str(name).replace("[", " ")
-#     name = name.replace("]", " ")
-#     name = name.replace("'", " ")
-#     insert_names = str(insert_names).replace("[", " ")
-#     insert_names = insert_names.replace("]", " ")
-#     insert_names = insert_names.replace("'", " ")
-#     vals = str(vals).replace("[", " ")
-#     vals = vals.replace("]", " ")
-
-#     create_arsenal = f"""
-#     CREATE TABLE arsenal ({names});
-       
-#     """
-
-#     insert_value = f"""
-#     INSERT INTO arsenal ({insert_names})
-#     VALUES ({vals}) 
-#     """
-
-#     return create_arsenal, insert_value
-
-
 if __name__ == "__main__":
 
     with open("region.json", "r") as f:
@@ -94,15 +63,22 @@ if __name__ == "__main__":
         # print(geom)
 
         print(names)
-        
-        
-        
-        
+
+        # create the table myregion
+        create_region = f"""
+        DROP TABLE IF EXISTS myregion;
+        CREATE TABLE myregion (rid integer, geom geometry(multipolygon,4326));
+        alter table myregion add primary key (rid);
+        """
+        # insert the region
         sql = f"""
         INSERT INTO myregion (rid, geom)
         VALUES ({id}, ST_GeomFromGeoJSON('{geom}')) 
         
         """
+        # print to see results
+        print(sql)
+
         # create_arsenal_table(names, insert_names, vals)
         names = str(names).replace("[", " ")
         names = names.replace("]", " ")
@@ -113,9 +89,9 @@ if __name__ == "__main__":
         vals = str(vals).replace("[", " ")
         vals = vals.replace("]", " ")
         sql2 = f"""
+        DROP TABLE IF EXISTS arsenal;
         CREATE TABLE arsenal ({names});
-        """        
-        
+        """
 
         sql3 = f"""
         INSERT INTO arsenal ({insert_names})
@@ -123,8 +99,17 @@ if __name__ == "__main__":
         """
         print(sql3)
         print(sql2)
-        # # with DatabaseCursor(".config.json") as cur:
-        #     res = cur.execute(sql3)
-        #     answer = cur.fetchall()
 
-        #     print(answer)
+        # insert myregion and arsenal to the database in postgresql
+        with DatabaseCursor(".config.json") as cur:
+            cur.execute(create_region)
+            cur.execute(sql)
+            cur.execute(sql2)
+            cur.execute(sql3)
+            cur.execute("SELECT * FROM myregion")
+            print(cur.fetchall())
+
+            # save my region to a json file
+            cur.execute(
+                "SELECT row_to_json(fc) FROM ( SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features FROM (SELECT 'Feature' As type, ST_AsGeoJSON(lg.geom)::json As geometry, row_to_json((SELECT l FROM (SELECT rid) As l)) As properties FROM myregion As lg) As f) As fc"
+            )

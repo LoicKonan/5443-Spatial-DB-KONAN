@@ -22,4 +22,3 @@ if __name__ == "__main__":
             time.sleep(5)
             continue
     print("Registered with game server.")
-    print("Starting server.")
