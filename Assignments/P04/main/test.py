@@ -50,29 +50,6 @@ CREATE TABLE arsenal ();
 """
 
 
-# def create_arsenal_table(name, insert_names, vals):
-#     name = str(name).replace("[", " ")
-#     name = name.replace("]", " ")
-#     name = name.replace("'", " ")
-#     insert_names = str(insert_names).replace("[", " ")
-#     insert_names = insert_names.replace("]", " ")
-#     insert_names = insert_names.replace("'", " ")
-#     vals = str(vals).replace("[", " ")
-#     vals = vals.replace("]", " ")
-
-#     create_arsenal = f"""
-#     CREATE TABLE arsenal ({names});
-       
-#     """
-
-#     insert_value = f"""
-#     INSERT INTO arsenal ({insert_names})
-#     VALUES ({vals}) 
-#     """
-
-#     return create_arsenal, insert_value
-
-
 if __name__ == "__main__":
 
     with open("region.json", "r") as f:
@@ -85,42 +62,46 @@ if __name__ == "__main__":
             names.append(key + " VARCHAR(128)")
             insert_names.append(key)
             vals.append(value)
-            # print(key, value)
+            print(key, value)
 
         for i in data["region"]["features"]:
-            # print(i)
+            print(i)
             geom = str(i["geometry"]).replace("'", '"')
 
-        # print(geom)
+        print(geom)
 
-        # print(names)
+        print(names)
         sql = f"""
         INSERT INTO region (rid, geom)
         VALUES ({id}, ST_GeomFromGeoJSON('{geom}')) 
         
-        """
-        # create_arsenal_table(names, insert_names, vals)
+        # """
+        # # create a table region
+        
+        
+        # # create_arsenal_table(names, insert_names, vals)
 
-        names = str(names).replace("[", " ")
-        names = names.replace("]", " ")
-        names = names.replace("'", " ")
-        insert_names = str(insert_names).replace("[", " ")
-        insert_names = insert_names.replace("]", " ")
-        insert_names = insert_names.replace("'", " ")
-        vals = str(vals).replace("[", " ")
-        vals = vals.replace("]", " ")
-        sql2 = f"""
-        CREATE TABLE arsenal ({names});
-        """
+        # names = str(names).replace("[", " ")
+        # names = names.replace("]", " ")
+        # names = names.replace("'", " ")
+        # insert_names = str(insert_names).replace("[", " ")
+        # insert_names = insert_names.replace("]", " ")
+        # insert_names = insert_names.replace("'", " ")
+        # vals = str(vals).replace("[", " ")
+        # vals = vals.replace("]", " ")
+        # sql2 = f"""
+        # CREATE TABLE arsenal ({names});
+        # """
 
-        sql3 = f"""
-        INSERT INTO arsenal ({insert_names})
-        VALUES ({vals}) 
-        """
-        print(sql3)
-        print(sql2)
-        with DatabaseCursor(".config.json") as cur:
-            res = cur.execute(sql)
-            answer = cur.fetchall()
-
-            print(answer)
+        # sql3 = f"""
+        # INSERT INTO arsenal ({insert_names})
+        # VALUES ({vals}) 
+        # """
+        # print(sql3)
+        # print(sql2)
+        # with DatabaseCursor(".config.json") as cur:
+        #     cur.execute(sql)
+        #     cur.execute(sql2)
+        #     cur.execute(sql3)
+            
+            
