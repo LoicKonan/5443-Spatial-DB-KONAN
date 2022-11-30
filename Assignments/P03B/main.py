@@ -9,7 +9,6 @@ import time
 import requests
 from re import S
 
-
 class DatabaseCursor(object):
     def __init__(self, conn_config_file):
         with open(conn_config_file) as config_file:
@@ -121,7 +120,8 @@ if __name__ == "__main__":
         print(sql3)
         print(sql2)
         
-        # print the 
+        # print the id in myregion.json
+        print(id)
 
         # insert myregion and arsenal to the database in postgresql
         with DatabaseCursor(".config.json") as cur:
@@ -131,3 +131,15 @@ if __name__ == "__main__":
             cur.execute(sql3)
             cur.execute("SELECT * FROM myregion")
             print(cur.fetchall())
+            
+            
+
+    # "Let get started !!!
+    requests.get("http://missilecommand.live:8080/START/" + str(id))
+    time.sleep(3)
+    print("Missiles are on the way....")
+
+    # Use RADAR_SWEEP to see incoming missiles..."
+    
+    
+    
