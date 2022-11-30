@@ -44,20 +44,20 @@ class DatabaseCursor(object):
         self.conn.close()
 
 
-url = "http://missilecommand.live:8080/RADAR_SWEEP"
+sweep = "http://missilecommand.live:8080/RADAR_SWEEP"
 
 if __name__ == '__main__':
 
-    # Using that while loop to send a request to the url and send the missiles to missiles1.json 
+    # Using that while loop to send a request to the sweep and send the missiles to missiles1.json 
     # then after 3 more seconds send to missiles2.json, then stop.
     while True:
-        response = requests.get(url)
+        response = requests.get(sweep)
         # print(response.text)
         with open('missile1.json', 'w') as f:
             json.dump(response.json(), f, indent = 4)
 
         time.sleep(3)
-        response = requests.get(url)
+        response = requests.get(sweep)
         # print(response.text)
         with open('missile2.json', 'w') as f:
             json.dump(response.json(), f, indent = 4)

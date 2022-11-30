@@ -44,6 +44,7 @@ This route will send back a set of missiles that you have to defend your region.
 |   1   | [main.py](api.py)  | The main file with comments and description             |
 |   2   | [README.md](README.md)  | The file that you are currently reading            |
 |   3   | [sql](./sql) | The sql folder with the sql files for the project             |
+|   4   | [myregion.geojson](myregion.geojson) | The region we defending                    |
 
 
 ### Instructions

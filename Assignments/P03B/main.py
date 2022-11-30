@@ -5,6 +5,9 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse, HTMLResponse
 import psycopg2
 import json
+import time
+import requests
+from re import S
 
 
 class DatabaseCursor(object):
@@ -42,8 +45,26 @@ class DatabaseCursor(object):
         self.conn.close()
 
 
-if __name__ == "__main__":
+url = "http://missilecommand.live:8080/REGISTER"
 
+if __name__ == "__main__":
+    
+    # Register.
+    while True:
+        try:
+            register = requests.get(url)
+            with open('myregion.json', 'w') as f:
+                json.dump(register.json(), f, indent=4)
+                print(register.text)
+            break
+        except Exception:
+            print("Connection error. Retrying in 5 seconds.")
+            time.sleep(5)
+            continue
+    print("Registered with game server.")
+    
+    
+    # Moving our data to the database
     with open("myregion.json", "r") as f:
         data = json.loads(f.read())
         names = []
@@ -63,14 +84,13 @@ if __name__ == "__main__":
         # print(geom)
         print(names)
 
-
         # create the table myregion
         create_region = f"""
         DROP TABLE IF EXISTS myregion;
         CREATE TABLE myregion (rid integer, geom geometry(multipolygon,4326));
         alter table myregion add primary key (rid);
         """
-        
+
         # insert the region
         sql = f"""
         INSERT INTO myregion (rid, geom)
@@ -100,6 +120,8 @@ if __name__ == "__main__":
         """
         print(sql3)
         print(sql2)
+        
+        # print the 
 
         # insert myregion and arsenal to the database in postgresql
         with DatabaseCursor(".config.json") as cur:
@@ -109,5 +131,3 @@ if __name__ == "__main__":
             cur.execute(sql3)
             cur.execute("SELECT * FROM myregion")
             print(cur.fetchall())
-
-         
