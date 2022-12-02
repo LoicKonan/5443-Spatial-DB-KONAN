@@ -8,6 +8,8 @@ import json
 import time
 import requests
 from re import S
+from geojson import MultiPolygon, Point, MultiPoint
+
 
 class DatabaseCursor(object):
     def __init__(self, conn_config_file):
@@ -117,11 +119,59 @@ if __name__ == "__main__":
         INSERT INTO arsenal ({insert_names})
         VALUES ({vals}) 
         """
+        
+        
+        
+        
+        
+        
+        # "cities": {
+        # "type": "FeatureCollection",
+        # "features": [
+        #     {
+        #         "type": "Feature",
+        #         "geometry": {
+        #             "type": "Point",
+        #             "coordinates": [
+        #                 -68.642578,
+        #                 46.55886
+        #             ]
+        #         },
+        #         "properties": {
+        #             "id": 15,
+        #             "latitude": 46.55886,
+        #             "longitude": -68.642578
+        #         }
+        #     },
+        
+        # Create table cities
+        create_cities = f"""
+        DROP TABLE IF EXISTS cities;
+        CREATE TABLE cities (id integer, geom geometry(point,4326));
+        alter table cities add primary key (id);
+        
+        """
+        # insert the cities
+        for i in data["cities"]["features"]:
+            # print(i)
+            geom = str(i["geometry"]).replace("'", '"')
+            id = i["properties"]["id"]
+            sql4 = f"""
+            INSERT INTO cities (id, geom)
+            VALUES ({id}, ST_GeomFromGeoJSON('{geom}')) 
+            """
+            # print(sql4)
+            
+        
+        
         print(sql3)
         print(sql2)
+        print(sql4)
+
         
         # print the id in myregion.json
         print(id)
+        
 
         # insert myregion and arsenal to the database in postgresql
         with DatabaseCursor(".config.json") as cur:
@@ -129,6 +179,8 @@ if __name__ == "__main__":
             cur.execute(sql)
             cur.execute(sql2)
             cur.execute(sql3)
+            cur.execute(create_cities)
+            cur.execute(sql4)
             cur.execute("SELECT * FROM myregion")
             print(cur.fetchall())
             
