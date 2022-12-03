@@ -57,7 +57,7 @@ if __name__ == "__main__":
         with open("missile1.json", "w") as f:
             json.dump(response.json(), f, indent=4)
 
-        time.sleep(3)
+        time.sleep(5)
         response = requests.get(sweep)
         # print(response.text)
         with open("missile2.json", "w") as f:

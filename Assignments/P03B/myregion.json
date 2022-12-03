@@ -5378,17 +5378,17 @@
         ]
     },
     "arsenal": {
-        "Atlas": 14,
-        "Harpoon": 18,
-        "Hellfire": 10,
-        "Javelin": 11,
-        "Minuteman": 13,
-        "Patriot": 10,
-        "Peacekeeper": 8,
-        "SeaSparrow": 8,
-        "Titan": 5,
-        "Tomahawk": 1,
-        "Trident": 2,
+        "Atlas": 16,
+        "Harpoon": 16,
+        "Hellfire": 14,
+        "Javelin": 9,
+        "Minuteman": 11,
+        "Patriot": 11,
+        "Peacekeeper": 7,
+        "SeaSparrow": 7,
+        "Titan": 6,
+        "Tomahawk": 2,
+        "Trident": 1,
         "total": 100
     },
     "cities": {

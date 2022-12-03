@@ -151,21 +151,14 @@ if __name__ == "__main__":
             cur.execute("SELECT * FROM myregion")
             print(cur.fetchall())
 
-    # "Let get started !!!
-    requests.get("http://missilecommand.live:8080/START/" + str(id))
-    time.sleep(3)
-    print("Missiles are on the way....")
+        # "Let get started !!!
+        with open("myregion.json") as f:
+            data = json.load(f)
+            id = data["id"]
+            print("Missiles are on the way to region: " + str(id))
 
-    #  Go run the RADAR_SWEEP.py to see incoming missiles..."
+            requests.get("http://missilecommand.live:8080/START/" + str(id))
 
-    # "Run the Quit request !!!
-    # wait for the 20 seconds then do the quit.
-    with open("myregion.json") as f:
-        data = json.load(f)
-        id = data["id"]
-
-        print("Our region is: " + str(id))
-
-        time.sleep(20)
-        requests.get("http://missilecommand.live:8080/QUIT/" + str(id))
-        print("Stop Sending them Damn Missiles to region " + "!!!!!!")
+            #  Go run the RADAR_SWEEP.py to see incoming missiles..."
+            
+          
