@@ -50,14 +50,14 @@ sweep = "http://missilecommand.live:8080/RADAR_SWEEP"
 if __name__ == "__main__":
 
     # Using that while loop to send a request to do the sweep and send the missiles to missiles1.json
-    # then after 3 more seconds send to missiles2.json, then stop.
+    # then after some seconds send to missiles2.json, then stop.
     while True:
         response = requests.get(sweep)
         # print(response.text)
         with open("missile1.json", "w") as f:
             json.dump(response.json(), f, indent=4)
 
-        time.sleep(5)
+        time.sleep(20)
         response = requests.get(sweep)
         # print(response.text)
         with open("missile2.json", "w") as f:
@@ -284,106 +284,24 @@ if __name__ == "__main__":
     
     
     
+    
+    
 
-    # uses postgis st_within to check if the where_missile_ground are in myregion table from the database.
-    # if the point (where_missile_ground) are in myregion then it will be added to the table called in_myregion
+    # uses postgis to check if the missiles will it myregion table from the database.
+
+    # uses postgis to get a set of points along the line with the missile for interception.
+
+    # Pick the point we want to try and intercept.
+
+    # Find the Number of seconds needed to to destroy incoming missiles that will hit myregion.
+
+    # when to shoot from our battery 
+    
+    # Pick which missiles from our Arsenal that we want to use.
     
     
     
     
     
+    # GO RUN solution.py
     
-
-
-
-
-
-
-
-
-
-
-    # # uses postgis to get a set of points along the line with the missile for interception
-    # # output should be a set of points along the line with the missile for interception
-    # with DatabaseCursor(".config.json") as cur:
-    #     cur.execute(
-    #         "SELECT ST_LineInterpolatePoints(ST_MakeLine(ST_SetSRID(ST_MakePoint(lon, lat), 4326), ST_SetSRID(ST_MakePoint(exact_longitude, exact_latitude), 4326)), .08) FROM exact_location;"
-    #     )
-    #     for row in cur.fetchall():
-    #         print(row)
-
-    # print("Points along the line with the missile for interception loaded to database.")
-
-    # # Here I'm creating a table called points_along_line then load it to the database.
-    # # id is a primary key int
-    # # points_along_line geometry
-    # with DatabaseCursor(".config.json") as cur:
-    #     cur.execute(
-    #         "DROP TABLE IF EXISTS points_along_line;"
-    #         "CREATE TABLE points_along_line (id SERIAL PRIMARY KEY, missile_id INT, lat DOUBLE PRECISION, lon DOUBLE PRECISION, bear DOUBLE PRECISION, alt DOUBLE PRECISION, time DOUBLE PRECISION, ms DOUBLE PRECISION, missile_type VARCHAR, time_missile_ground DOUBLE PRECISION, drop_rate DOUBLE PRECISION, exact_latitude DOUBLE PRECISION, exact_longitude DOUBLE PRECISION ,points_in_bounding_box BOOLEAN, points_along_line geometry)"
-    #     )
-    #     cur.execute(
-    #         "INSERT INTO points_along_line (missile_id, lat, lon, bear, alt, time, ms, missile_type, time_missile_ground, drop_rate, exact_latitude, exact_longitude, points_in_bounding_box, points_along_line) SELECT missile_id, lat, lon, bear, alt, time, ms, missile_type, time_missile_ground, drop_rate, exact_latitude, exact_longitude, ST_Within(ST_SetSRID(ST_MakePoint(exact_longitude, exact_latitude), 4326), myregion), ST_LineInterpolatePoints(ST_MakeLine(ST_SetSRID(ST_MakePoint(lon, lat), 4326), ST_SetSRID(ST_MakePoint(exact_longitude, exact_latitude), 4326)), .08) FROM exact_location, myregion;"
-    #     )
-
-
-
-
-
-
-
-
-
-
-    # # the point we want to try and intercept (halfway point)
-    # # output should be the point we want to try and intercept (halfway point)
-    # with DatabaseCursor(".config.json") as cur:
-    #     cur.execute(
-    #         "SELECT ST_AsText(ST_LineInterpolatePoint(ST_MakeLine(ST_SetSRID(ST_MakePoint(lon, lat), 4326), ST_SetSRID(ST_MakePoint(exact_longitude, exact_latitude), 4326)), .5)) FROM exact_location;"
-    #     )
-    #     for row in cur.fetchall():
-    #         print(row)
-
-    # # Here I'm creating a table called closest_city then load it to the database.
-    # # id is a primary key int
-    # # closest_city geometry
-    # with DatabaseCursor(".config.json") as cur:
-    #     cur.execute(
-    #         "DROP TABLE IF EXISTS closest_city;"
-    #         "CREATE TABLE closest_city (id SERIAL PRIMARY KEY, missile_id INT, lat DOUBLE PRECISION, lon DOUBLE PRECISION, bear DOUBLE PRECISION, alt DOUBLE PRECISION, time DOUBLE PRECISION, ms DOUBLE PRECISION, missile_type VARCHAR, time_missile_ground DOUBLE PRECISION, drop_rate DOUBLE PRECISION, exact_latitude DOUBLE PRECISION, exact_longitude DOUBLE PRECISION ,points_in_bounding_box BOOLEAN, points_along_line geometry, closest_city geometry)"
-    #     )
-    #     cur.execute(
-    #         "INSERT INTO closest_city (missile_id, lat, lon, bear, alt, time, ms, missile_type, time_missile_ground, drop_rate, exact_latitude, exact_longitude, points_in_bounding_box, points_along_line, closest_city) SELECT missile_id, lat, lon, bear, alt, time, ms, missile_type, time_missile_ground, drop_rate, exact_latitude, exact_longitude, ST_Within(ST_SetSRID(ST_MakePoint(exact_longitude, exact_latitude), 4326), myregion), ST_LineInterpolatePoints(ST_MakeLine(ST_SetSRID(ST_MakePoint(lon, lat), 4326), ST_SetSRID(ST_MakePoint(exact_longitude, exact_latitude), 4326)), .08), ST_ClosestPoint(ST_SetSRID(ST_MakePoint(lon, lat), 4326), ST_SetSRID(ST_MakePoint(exact_longitude, exact_latitude), 4326)) FROM exact_location, myregion;"
-    #     )
-
-
-
-
-
-
-
-
-
-    #     # gets the closest city to where we want to intercept
-    # # output should be the closest city to where we want to intercept
-    # with DatabaseCursor(".config.json") as cur:
-    #     cur.execute(
-    #         "SELECT ST_AsText(ST_ClosestPoint(ST_SetSRID(ST_MakePoint(lon, lat), 4326), ST_SetSRID(ST_MakePoint(exact_longitude, exact_latitude), 4326))) FROM exact_location;"
-    #     )
-    #     # for row in cur.fetchall():
-    #     #     print(row)
-
-
-
-
-
-
-
-
-
-
-    # print("Closest city to where we want to intercept loaded to database.")
-
-    # # Number of seconds needed to to destroy incoming missiles.
-
-    # # when to fire from battery or city

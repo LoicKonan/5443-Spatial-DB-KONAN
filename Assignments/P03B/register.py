@@ -119,20 +119,20 @@ if __name__ == "__main__":
         VALUES ({vals}) 
         """
 
-        # Create table cities
-        create_cities = f"""
-        DROP TABLE IF EXISTS cities;
-        CREATE TABLE cities (id integer, geom geometry(point,4326));
-        alter table cities add primary key (id);
+        # Create table battery
+        battery = f"""
+        DROP TABLE IF EXISTS battery;
+        CREATE TABLE battery (id integer, geom geometry(point,4326));
+        alter table battery add primary key (id);
         
         """
-        # insert the cities
+        # insert the battery
         for i in data["cities"]["features"]:
             # print(i)
             geom = str(i["geometry"]).replace("'", '"')
             id = i["properties"]["id"]
             sql4 = f"""
-            INSERT INTO cities (id, geom)
+            INSERT INTO battery (id, geom)
             VALUES ({id}, ST_GeomFromGeoJSON('{geom}')) 
             """
 
@@ -146,7 +146,7 @@ if __name__ == "__main__":
             cur.execute(sql)
             cur.execute(sql2)
             cur.execute(sql3)
-            cur.execute(create_cities)
+            cur.execute(battery)
             cur.execute(sql4)
             cur.execute("SELECT * FROM myregion")
             print(cur.fetchall())
