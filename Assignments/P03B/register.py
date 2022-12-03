@@ -49,12 +49,12 @@ class DatabaseCursor(object):
 url = "http://missilecommand.live:8080/REGISTER"
 
 if __name__ == "__main__":
-    
+
     # Register.
     while True:
         try:
             register = requests.get(url)
-            with open('myregion.json', 'w') as f:
+            with open("myregion.json", "w") as f:
                 json.dump(register.json(), f, indent=4)
                 print(register.text)
             break
@@ -63,8 +63,7 @@ if __name__ == "__main__":
             time.sleep(5)
             continue
     print("Registered with game server.")
-    
-    
+
     # Moving our data to the database
     with open("myregion.json", "r") as f:
         data = json.loads(f.read())
@@ -119,31 +118,7 @@ if __name__ == "__main__":
         INSERT INTO arsenal ({insert_names})
         VALUES ({vals}) 
         """
-        
-        
-        
-        
-        
-        
-        # "cities": {
-        # "type": "FeatureCollection",
-        # "features": [
-        #     {
-        #         "type": "Feature",
-        #         "geometry": {
-        #             "type": "Point",
-        #             "coordinates": [
-        #                 -68.642578,
-        #                 46.55886
-        #             ]
-        #         },
-        #         "properties": {
-        #             "id": 15,
-        #             "latitude": 46.55886,
-        #             "longitude": -68.642578
-        #         }
-        #     },
-        
+
         # Create table cities
         create_cities = f"""
         DROP TABLE IF EXISTS cities;
@@ -160,18 +135,10 @@ if __name__ == "__main__":
             INSERT INTO cities (id, geom)
             VALUES ({id}, ST_GeomFromGeoJSON('{geom}')) 
             """
-            # print(sql4)
-            
-        
-        
+
         print(sql3)
         print(sql2)
         print(sql4)
-
-        
-        # print the id in myregion.json
-        print(id)
-        
 
         # insert myregion and arsenal to the database in postgresql
         with DatabaseCursor(".config.json") as cur:
@@ -183,15 +150,22 @@ if __name__ == "__main__":
             cur.execute(sql4)
             cur.execute("SELECT * FROM myregion")
             print(cur.fetchall())
-            
-            
 
     # "Let get started !!!
     requests.get("http://missilecommand.live:8080/START/" + str(id))
     time.sleep(3)
     print("Missiles are on the way....")
 
-    # Use RADAR_SWEEP to see incoming missiles..."
-    
-    
-    
+    #  Go run the RADAR_SWEEP.py to see incoming missiles..."
+
+    # "Run the Quit request !!!
+    # wait for the 20 seconds then do the quit.
+    with open("myregion.json") as f:
+        data = json.load(f)
+        id = data["id"]
+
+        print("Our region is: " + str(id))
+
+        time.sleep(20)
+        requests.get("http://missilecommand.live:8080/QUIT/" + str(id))
+        print("Stop Sending them Damn Missiles to region " + "!!!!!!")

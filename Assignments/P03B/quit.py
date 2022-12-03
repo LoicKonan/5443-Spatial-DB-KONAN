@@ -8,6 +8,9 @@ if __name__ == "__main__":
     with open("myregion.json") as f:
         data = json.load(f)
         id = data["id"]
+        
+    # wait for the 20 seconds then do the quit.
+    time.sleep(20)
 
     requests.get("http://missilecommand.live:8080/QUIT/" + str(id))
     print("Stop Sending them Damn Missiles to region " + str(id) + "!!!!!!")
