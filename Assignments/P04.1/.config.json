@@ -1,0 +1,8 @@
+{
+    "dbname": "battleship",
+    "user": "commander",
+    "password": "battery",
+    "host": "137.184.122.192",
+    "port": "5432",
+    "schema": "public"
+}

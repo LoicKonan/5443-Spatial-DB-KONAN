@@ -1,0 +1,98 @@
+[
+    {
+      "Direction": "N",
+      "From d°": 348.75,
+      "Middle d°": 0,
+      "To d°": 11.25
+    },
+    {
+      "Direction": "NNE",
+      "From d°": 11.25,
+      "Middle d°": 22.5,
+      "To d°": 33.75
+    },
+    {
+      "Direction": "NE",
+      "From d°": 33.75,
+      "Middle d°": 45,
+      "To d°": 56.25
+    },
+    {
+      "Direction": "ENE",
+      "From d°": 56.25,
+      "Middle d°": 67.5,
+      "To d°": 78.75
+    },
+    {
+      "Direction": "E",
+      "From d°": 78.75,
+      "Middle d°": 90,
+      "To d°": 101.25
+    },
+    {
+      "Direction": "ESE",
+      "From d°": 101.25,
+      "Middle d°": 112.5,
+      "To d°": 123.75
+    },
+    {
+      "Direction": "SE",
+      "From d°": 123.75,
+      "Middle d°": 135,
+      "To d°": 146.25
+    },
+    {
+      "Direction": "SSE",
+      "From d°": 146.25,
+      "Middle d°": 157.5,
+      "To d°": 168.75
+    },
+    {
+      "Direction": "S",
+      "From d°": 168.75,
+      "Middle d°": 180,
+      "To d°": 191.25
+    },
+    {
+      "Direction": "SSW",
+      "From d°": 191.25,
+      "Middle d°": 202.5,
+      "To d°": 213.75
+    },
+    {
+      "Direction": "SW",
+      "From d°": 213.75,
+      "Middle d°": 225,
+      "To d°": 236.25
+    },
+    {
+      "Direction": "WSW",
+      "From d°": 236.25,
+      "Middle d°": 247.5,
+      "To d°": 258.75
+    },
+    {
+      "Direction": "W",
+      "From d°": 258.75,
+      "Middle d°": 270,
+      "To d°": 281.25
+    },
+    {
+      "Direction": "WNW",
+      "From d°": 281.25,
+      "Middle d°": 292.5,
+      "To d°": 303.75
+    },
+    {
+      "Direction": "NW",
+      "From d°": 303.75,
+      "Middle d°": 315,
+      "To d°": 326.25
+    },
+    {
+      "Direction": "NNW",
+      "From d°": 326.25,
+      "Middle d°": 337.5,
+      "To d°": 348.75
+    }
+   ]

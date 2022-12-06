@@ -1,0 +1,197 @@
+[
+    {
+        "item": "Start",
+        "description": "Places you on the player queue to allow your fleet to take a turn.",
+        "params": {
+            "fleet_id": "int"
+        },
+        "route": "gameStart",
+        "examples": [
+            {
+                "command": "{'cmd':'gameStart','fleet_id': 'us_navy'",
+                "explanation": "see description "
+            }
+        ],
+        "returns": "{'success':True/False}"
+    },
+    {
+        "item": "Generate Fleet",
+        "description": "Creates a new fleet for current game instance.",
+        "params": {
+            "fleet_id": "int"
+        },
+        "route": "generateFleet",
+        "examples": [
+            {
+                "command": "{'cmd':'generateFleet','fleet_id': 'us_navy'",
+                "explanation": "see description "
+            }
+        ],
+        "returns": "{Large json file with all of your fleet data.}"
+    },
+    {
+        "item": "Get Battle Location",
+        "description": "Sends back the bounding box and cardinal location in the bbox for you to move/position your fleet.",
+        "params": {
+            "fleet_id": "int"
+        },
+        "route": "battleLocation",
+        "examples": [
+            {
+                "command": "{'cmd':'battleLocation','fleet_id': 'us_navy'}",
+                "explanation": "see description "
+            }
+        ],
+        "returns": {
+            "bbox": {
+                "UpperLeft": "{'lon':dd.ffffffff,'lat':dd.ffffffff}",
+                "LowerRight": "{'lon':dd.ffffffff,'lat':dd.ffffffff}"
+            },
+            "CardinalLocation": "SSE"
+        }
+    },
+    {
+        "item": "Position Fleet",
+        "description": "Place your fleet at its pseudo random location in the game board.",
+        "params": {
+            "fleet_id": "int",
+            "ship_id": "list[int]",
+            "location": "list[tuples(float,float)]",
+            "bearing": "list[float]"
+        },
+        "route": "positionFleet",
+        "examples": [
+            {
+                "command": "{'cmd':'positionFleet','fleet_id': 'us_navy','ship_id': [1,2,3,...,N],'location': [(lon1,lat1),(lon2,lat2),(lon3,lat3),...(lonN,latN)],'bearing':[bearing1,bearing2,bearing3,...,bearingN]}",
+                "explanation": "Places all your fleets ships at specified locations. "
+            }
+        ],
+        "returns": "{'success':True/False}"
+    },
+    {
+        "item": "Ships Speed",
+        "description": "Sets the speed for one or more ships.",
+        "params": {
+            "fleet_id": "int",
+            "ship_id": "list[int]",
+            "speed": "list[float]"
+        },
+        "route": "shipsSpeed",
+        "examples": [
+            {
+                "command": "{'cmd':'shipsSpeed','fleet_id': 'us_navy','ship_id': [],'speed': [21]}",
+                "explanation": "Set the speed of all ships in the fleet to 21km per hour"
+            },
+            {
+                "command": "{'cmd':'shipsSpeed','fleet_id': 'us_navy','ship_id': [16],'speed': [21]}",
+                "explanation": "Set the speed of ship with id 16 to 21km per hour"
+            },
+            {
+                "command": "{'cmd':'shipsSpeed','fleet_id': 'us_navy','ship_id': [16,19,23,24],'speed': [18,18,21,21]}",
+                "explanation": "Set the speed of ship with id 16 to 18km, ship with id 19 to 18km ship 23 to 21km and so on"
+            }
+        ],
+        "returns": "{'success':True/False}"
+    },
+    {
+        "item": "Move Ships",
+        "description": "Starts moving one or more ships in the fleet in direction each ship is facing.",
+        "params": {
+            "fleet_id": "int",
+            "ship_id": "list[int]",
+            "distance": "list[float]"
+        },
+        "route": "moveShips",
+        "examples": [
+            {
+                "command": "{'cmd':'moveShips','fleet_id': 'us_navy','ship_id': [],'distance': [20000]}",
+                "explanation": "Move all ships in the fleet 20000 meters at each ships current heading."
+            },
+            {
+                "command": "{'cmd':'moveShips','fleet_id': 'us_navy','ship_id': [16],'distance': [1000]}",
+                "explanation": "Move the ship with id 16 1000 meters at its current heading."
+            },
+            {
+                "command": "{'cmd':'moveShips','fleet_id': 'us_navy','ship_id': [16,19,23,24],'distance': [3000,2000,1500,20000]}",
+                "explanation": "Move the ship with id 16 3000 meters in its current heading, ship with id 19 2000m at its heading, ship with id 23 1500 meters ... and so on."
+            }
+        ],
+        "returns": "{'success':True/False}"
+    },
+    {
+        "item": "Turn Ships",
+        "description": "Starts turning one or more ships in the fleet giving each listed a new heading.",
+        "params": {
+            "fleet_id": "int",
+            "ship_id": "list[int]",
+            "heading": "list[float]"
+        },
+        "route": "turnShips",
+        "examples": [
+            {
+                "command": "{'cmd':'turnShips','fleet_id': 'us_navy','ship_id': [],'heading': [277]}",
+                "explanation": "Turn all ships to the new heading of 277 degrees."
+            },
+            {
+                "command": "{'cmd':'turnShips','fleet_id': 'us_navy','ship_id': [16],'heading': [188]}",
+                "explanation": "Turn the ship with id 16 to a new heading of 188 degrees."
+            },
+            {
+                "command": "{'cmd':'turnShips','fleet_id': 'us_navy','ship_id': [16,19,23],'heading': [180,90,270]}",
+                "explanation": "Turn ship with id 16 to 180 degrees, ship with id 19 to 90 degrees meters, and ship with id 23 to a new heading of 270 degrees."
+            }
+        ],
+        "returns": "{'success':True/False}"
+    },
+    {
+        "item": "Move Guns",
+        "description": "Starts turning one or more ships guns toward a particular bearing and elevation. The bearing is in relation to the ship.",
+        "params": {
+            "fleet_id": "int",
+            "ship_id": "list[int]",
+            "gun_id": "list[float]",
+            "b_e": "list[(float,float)]"
+        },
+        "route": "moveGuns",
+        "examples": [
+            {
+                "command": "{'cmd':'moveGuns','fleet_id': 'us_navy','ship_id':[],'gun_id':[],'b_e': [(90,25)]}",
+                "explanation": "Turn all ships guns in your fleet to starboard (90 degrees) and at an elevation of 25 degrees."
+            },
+            {
+                "command": "{'cmd':'moveGuns','fleet_id': 'us_navy','ship_id':[23],'gun_id':[1,2,3,4],'b_e': [(90,25),(90,25),(270,15),(270,15)]}",
+                "explanation": "Turn guns 1 and 2 on ship 23 to starboard (90 degrees) with elevation 25 degrees and guns 3,4 to port (270 degrees) and at an elevation of 15 degrees."
+            },
+            {
+                "command": "{'cmd':'moveGuns','fleet_id': 'us_navy','ship_id':[23,24,25],'gun_id':[[1,2,3,4],[1,2,3,4],[1,2,3,4]],'b_e': [[(90,25),(90,25),(270,15),(270,15)],[(90,25),(90,25),(270,15),(270,15)],[(90,25),(90,25),(270,15),(270,15)],[(90,25),(90,25),(270,15),(270,15)]]}",
+                "explanation": "I'm not sure how I feel about this big command.'"
+            }
+        ],
+        "returns": "{'success':True/False}"
+    },
+    {
+        "item": "Fire Guns",
+        "description": "Starts turning one or more ships guns toward a particular bearing and elevation. The bearing is in relation to the ship.",
+        "params": {
+            "fleet_id": "int",
+            "ship_id": "list[int]",
+            "gun_id": "list[float]"
+        },
+        "route": "fireGuns",
+        "examples": [
+            {
+                "command": "{'cmd':'fireGuns','fleet_id': 'us_navy','ship_id':[],'gun_id':[]}",
+                "explanation": "Fire every gun in your fleet at its current bearing and elevation."
+            },
+            {
+                "command": "{'cmd':'fireGuns','fleet_id': 'us_navy','ship_id':[23],'gun_id':[]}",
+                "explanation": "Fire all the guns on ship 23 at their current bearing and elevation."
+            },
+            {
+                "command": "{'cmd':'fireGuns','fleet_id': 'us_navy','ship_id':[23,24],'gun_id':[[1,3,5],[2,4]]}",
+                "explanation": "Fire guns 1,3,5 on ship 23 and fire guns 2,4 on ship 24 at their current bearing and elevation."
+            }
+        ],
+        "returns": "{'success':True/False}"
+    }
+]

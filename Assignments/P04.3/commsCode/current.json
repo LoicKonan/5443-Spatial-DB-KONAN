@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "game_id": 5,
+            "start_time": 1669679424,
+            "end_time": 1679689018,
+            "num_fleets": 0,
+            "num_ships": 0,
+            "created_by": "us_gravy",
+            "game_name": "lets do this"
+        },
+        {
+            "game_id": 19,
+            "start_time": 1670297626,
+            "end_time": 1670301226,
+            "num_fleets": 0,
+            "num_ships": 0,
+            "created_by": "rocketscience",
+            "game_name": "test1"
+        }
+    ],
+    "success": true,
+    "effectedRows": 2
+}
