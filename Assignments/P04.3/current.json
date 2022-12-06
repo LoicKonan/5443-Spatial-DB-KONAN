@@ -10,54 +10,9 @@
             "game_name": "lets do this"
         },
         {
-            "game_id": 19,
-            "start_time": 1670297626,
-            "end_time": 1670301226,
-            "num_fleets": 0,
-            "num_ships": 0,
-            "created_by": "rocketscience",
-            "game_name": "test1"
-        },
-        {
-            "game_id": 20,
-            "start_time": 1670299601,
-            "end_time": 1670303201,
-            "num_fleets": 0,
-            "num_ships": 0,
-            "created_by": "us_navy",
-            "game_name": "poseidon"
-        },
-        {
-            "game_id": 21,
-            "start_time": 1670299773,
-            "end_time": 1670303373,
-            "num_fleets": 0,
-            "num_ships": 0,
-            "created_by": "us_navy",
-            "game_name": "poseidon"
-        },
-        {
-            "game_id": 22,
-            "start_time": 1670299793,
-            "end_time": 1670303393,
-            "num_fleets": 0,
-            "num_ships": 0,
-            "created_by": "us_navy",
-            "game_name": "poseidon"
-        },
-        {
-            "game_id": 23,
-            "start_time": 1670299989,
-            "end_time": 1670303589,
-            "num_fleets": 0,
-            "num_ships": 0,
-            "created_by": "us_navy",
-            "game_name": "poseidon"
-        },
-        {
-            "game_id": 24,
-            "start_time": 1670300038,
-            "end_time": 1670303638,
+            "game_id": 26,
+            "start_time": 1670351590,
+            "end_time": 1670355190,
             "num_fleets": 0,
             "num_ships": 0,
             "created_by": "us_navy",
@@ -65,5 +20,5 @@
         }
     ],
     "success": true,
-    "effectedRows": 7
+    "effectedRows": 2
 }
