@@ -46,6 +46,7 @@ class DatabaseCursor(object):
         self.conn.close()
 
 
+# sourcery skip: avoid-builtin-shadow
 url = "http://missilecommand.live:8080/REGISTER"
 
 if __name__ == "__main__":
@@ -72,10 +73,10 @@ if __name__ == "__main__":
         vals = []
         id = data["id"]
         for key, value in data["arsenal"].items():
-            names.append(key + " VARCHAR(128)")
+            names.append(f"{key} VARCHAR(128)")
             insert_names.append(key)
             vals.append(value)
-            # print(key, value)
+                    # print(key, value)
 
         for i in data["region"]["features"]:
             # print(i)
@@ -85,11 +86,12 @@ if __name__ == "__main__":
         print(names)
 
         # create the table myregion
-        create_region = f"""
+        create_region = """
         DROP TABLE IF EXISTS myregion;
         CREATE TABLE myregion (rid integer, geom geometry(multipolygon,4326));
         alter table myregion add primary key (rid);
         """
+
 
         # insert the region
         sql = f"""
@@ -120,12 +122,13 @@ if __name__ == "__main__":
         """
 
         # Create table battery
-        battery = f"""
+        battery = """
         DROP TABLE IF EXISTS battery;
         CREATE TABLE battery (id integer, geom geometry(point,4326));
         alter table battery add primary key (id);
         
         """
+
         # insert the battery
         for i in data["cities"]["features"]:
             # print(i)
@@ -155,9 +158,9 @@ if __name__ == "__main__":
         with open("myregion.json") as f:
             data = json.load(f)
             id = data["id"]
-            print("Missiles are on the way to region: " + str(id))
+            print(f"Missiles are on the way to region: {str(id)}")
 
-            requests.get("http://missilecommand.live:8080/START/" + str(id))
+            requests.get(f"http://missilecommand.live:8080/START/{str(id)}")
 
             #  Go run the RADAR_SWEEP.py to see incoming missiles..."
             
