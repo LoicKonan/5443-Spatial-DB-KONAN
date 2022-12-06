@@ -9,6 +9,7 @@ import time
 import requests
 from re import S
 from geojson import MultiPolygon, Point, MultiPoint
+import copy
 
 
 
@@ -45,9 +46,28 @@ class DatabaseCursor(object):
 
         self.conn.commit()
         self.conn.close()
+        
+        
+"""
+    Borrowed the inspiration from Dakota
+    
+    Needed to convert our timestamps to a format that the
+    server would accept.
+    
+        - Example input time:  "2022-10-27 12:12:07"
+        - Example return time: “25/05/99 19:42:50”
+        
+    - Byron
+"""
+def shouldHaveUsedUnixTimeStamps(timestamp):
+    
+    print(f'Before: {timestamp}')
+    modified = (timestamp.replace(' ', '-')).split("-")
+    
+    year = modified[0][2::]
+    
+    return (modified[2] + '/' + modified[1] + '/' + year + ' ' + modified[3])
 
-
-solution = "http://missilecommand.live:8080/FIRE_SOLUTION"
 
 if __name__ == "__main__":
     
@@ -62,91 +82,79 @@ if __name__ == "__main__":
     # aim_lon           => Get the target latitude longitude from the table point_to_shoot
     # expected_hit_time => Get the return time from the return_time_hh_mm_ss table.
     # target_alt        => Get the target altitude from the table point_to_shoot_altitude
-    
-    
+
+
     # Get the team id myregion table
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT rid FROM myregion")
         team_id = cur.fetchall()
         # print
         print("team_id: ", team_id)
-        
+
     # Get the missile id from the table point_to_shoot
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT missile_id FROM point_to_shoot")
         missile_id = cur.fetchall()
         # print
         print("missile_id: ", missile_id)
-        
+
     # Get the missile type from the table speed database
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT missile_type FROM speed")
         missile_type = cur.fetchall()
         # print
         print("missile_type: ", missile_type)
-        
+
     # Get the return Fire time from the return_time_hh_mm_ss_printable table in string format.
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT return_time_hh_mm_ss_printable FROM return_time_hh_mm_ss_printable")
         return_time_hh_mm_ss_printable = cur.fetchall()
         # print
         print("return_time_hh_mm_ss_printable: ", return_time_hh_mm_ss_printable)
-        
+
     # Get the battery latitude from the table battery_lon_lat
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT latitude FROM battery_lon_lat")
         battery_lat = cur.fetchall()
         # print
         print("battery_lat: ", battery_lat)
-        
+
     # Get the battery longitude from the table battery_lon_lat
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT longitude FROM battery_lon_lat")
         battery_lon = cur.fetchall()
         # print
         print("battery_lon: ", battery_lon)
-        
+
     # Get the target latitude from the table point_to_shoot
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT point_to_shoot_lat FROM point_to_shoot")
         point_to_shoot_lat = cur.fetchall()
         # print
         print("point_to_shoot_lat: ", point_to_shoot_lat)
-        
+
     # Get the target latitude longitude from the table point_to_shoot
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT point_to_shoot_lon FROM point_to_shoot")
         point_to_shoot_lon = cur.fetchall()
         # print
         print("point_to_shoot_lon: ", point_to_shoot_lon)
-        
-    # Get the return time from the return_time_hh_mm_ss_printable table in string format.
+
+    # Get the return time from the return_time_hh_mm_ss_printable_central_time table in string format.
     with DatabaseCursor(".config.json") as cur:
-        cur.execute("SELECT return_time_hh_mm_ss_printable FROM return_time_hh_mm_ss_printable")
-        return_time_hh_mm_ss_printable = cur.fetchall()
+        cur.execute("SELECT return_time_hh_mm_ss_printable_central_time FROM return_time_hh_mm_ss_printable_central_time")
+        return_time_hh_mm_ss_printable_central_time = cur.fetchall()
         # print
-        print("return_time_hh_mm_ss_printable: ", return_time_hh_mm_ss_printable)
-        
+        print("return_time_hh_mm_ss_printable_central_time: ", return_time_hh_mm_ss_printable_central_time)
+
     # Get the target altitude from the table point_to_shoot_altitude
     with DatabaseCursor(".config.json") as cur:
         cur.execute("SELECT altitude FROM point_to_shoot_altitude")
         target_alt = cur.fetchall()
         # print
         print("target_alt: ", target_alt)
-    
-    # Create a solution.json that will have the following fields
-    #                     "team_id" :"INT"
-    #                     "missile_id": "INT"
-    #                     "missile_type": "STRING"
-    #                     "return_time_hh_mm_ss": "STRING"
-    #                     "battery_lat": "INT"
-    #                     "battery_lon": "INT"
-    #                     "point_to_shoot_lat": "INT"
-    #                     "point_to_shoot_lon": "INT"
-    #                     "return_time_hh_mm_ss": "STRING";
-    #                     "target_alt": "INT"
-    
-    
+
+
     # Make a solution.json that will have the results and send it to the solution url. 
     solution = {
         "team_id": team_id,
@@ -157,23 +165,105 @@ if __name__ == "__main__":
         "firedfrom_lon": battery_lon,
         "aim_lat": point_to_shoot_lat,
         "aim_lon": point_to_shoot_lon,
-        "expected_hit_time": return_time_hh_mm_ss_printable,
+        "expected_hit_time": return_time_hh_mm_ss_printable_central_time,
         "target_alt": target_alt
     }
-    
+
+    team_id = 0
+    MissileResponse1 = []
+
+    MissileResponse = {
+        "team_id": team_id,
+        "target_missile_id": 0,
+        "missile_type": "string",
+        "fired_time": "string",
+        "firedfrom_lat": 0,
+        "firedfrom_lon": 0,
+        "aim_lat": 0,
+        "aim_lon": 0,
+        "expected_hit_time": "string",
+        "target_alt": 0
+    }
+
+    MissileFR = {
+        "team_id": team_id,
+        "target_missile_id": 0,
+        "missile_type": "string",
+        "fired_time": "string",
+        "firedfrom_lat": 0,
+        "firedfrom_lon": 0,
+        "aim_lat": 0,
+        "aim_lon": 0,
+        "expected_hit_time": "string",
+        "target_alt": 0
+    }
+
+
+    """
+        This is where I dumped our JSON objects into a single list
+        the way DeAngelo did it to get it to work
+        
+        - Byron
+    """
+    stupidList = [solution]
     # send solution to the url and make a json file 
     with open("solution.json", "w") as f:
-        json.dump(solution, f)
-        
-    # send solution to the url
-    url = "http://missilecommand.live:8080/FIRE_SOLUTION/"
-    files = {'file': open('solution.json', 'rb')}
-    r = requests.post(url, files=files)
-    print(r.text)
-    
-    
-    
-    
-    
-        
-    
+        json.dump(stupidList, f, indent=4)
+
+
+    FinalMissiles = []
+
+    with open("solution.json") as Fin:
+        data = json.load(Fin)
+
+
+    Fin.close()
+    finalM = []
+
+    for MR in data:
+        ## Number of missiles to read in 
+        missileCount = len(MR["target_missile_id"])
+
+        for count, i in enumerate(range(missileCount)):
+            MissileFR["team_id"] = MR["team_id"][0][0]
+            MissileFR["target_missile_id"] = MR["target_missile_id"][count][0]
+            MissileFR["missile_type"] = MR["missile_type"][count][0]
+
+            ## Getting the proper format timestamp
+            HT = shouldHaveUsedUnixTimeStamps(MR["fired_time"][count][0])
+            MissileFR["fired_time"] = HT
+
+            MissileFR["firedfrom_lat"] = MR["firedfrom_lat"][0][0]
+            MissileFR["firedfrom_lon"] = MR["firedfrom_lon"][0][0]
+            MissileFR["aim_lat"] = MR["aim_lat"][count][0]
+            MissileFR["aim_lon"] = MR["aim_lon"][count][0]
+
+            ## Getting the proper format timestamp
+            EHT = shouldHaveUsedUnixTimeStamps(MR["expected_hit_time"][count][0])
+            MissileFR["expected_hit_time"] = EHT
+
+            MissileFR["target_alt"] = MR["target_alt"][count][0]
+
+            """
+                Here is where the biggest change occurs
+                
+                Instead of messing with our file, we are sending them one at a time
+                as we read them from the file.
+                
+                - Byron
+            """
+            finalM.append(copy.deepcopy(MissileFR))
+            r = requests.post("http://missilecommand.live:8080/FIRE_SOLUTION/", json=MissileFR)
+            print(r.text)
+            
+
+    ## Still writing the results for reference but don't really need it for calling the server
+    ## - Byron
+    with open ('responseMissiles.json', 'w') as Fout:
+
+        json.dump(finalM, Fout, indent=4)
+
+    Fout.close()
+
+
+

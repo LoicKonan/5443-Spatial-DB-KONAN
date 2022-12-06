@@ -46,26 +46,18 @@ MissileResponse = {
 # print(MissileResponse)
 
 
-# go to solution.json and first of each dictionary the key and the value.
-# then go to the value and get the first element of the list.
-# then go to the value and get the first element of the list.
+# go to solution.json and get the first of each key and the value.
+# then go to the value and get the first element and value.
 with open("solution.json") as data:
     data = json.load(data)
     for key, value in data.items():
         print(key,value[0][0])
         
-        # make the result into a dictionary and then append it to the list.
-        # then print the list, then print the dictionary.
+        # send it to a json.
         with open("solution1.json", "a") as f:
             json.dump((key,value[0][0]), f)
             f.write("\n")            
-            
-        # remove the bracket in solution1.json using . strip(“[]”)
-        # then print the result.
-        with open("solution1.json", "r") as f:
-            for line in f:
-                print(line.strip("[]"))
-                
+        
             
             
             

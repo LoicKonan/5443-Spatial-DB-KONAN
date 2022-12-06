@@ -335,7 +335,7 @@ if __name__ == "__main__":
         )
 
     # uses postgis to check if the missile_lines intersects myregion.geom
-    # if it does then it will insert the missile_id into the table called danger_closing
+    # if it does then insert the missile_id into the table called danger_closing
     # danger_closing => missiles that are in myregion
     # danger_closing boolean
     # return the ones that are true.
@@ -362,10 +362,10 @@ if __name__ == "__main__":
             "CREATE TABLE missiles_Intersects (id SERIAL PRIMARY KEY, missile_id INT, danger_closing boolean, missile_line geometry, missiles_Intersects geometry)"
         )
         cur.execute(
-            "INSERT INTO missiles_Intersects (missile_id, danger_closing, missile_line, missiles_Intersects) SELECT danger_closing.missile_id, danger_closing.danger_closing, danger_closing.missile_line, ST_LineInterpolatePoints(danger_closing.missile_line, 0.125) FROM danger_closing"
+            "INSERT INTO missiles_Intersects (missile_id, danger_closing, missile_line, missiles_Intersects) SELECT danger_closing.missile_id, danger_closing.danger_closing, danger_closing.missile_line, ST_LineInterpolatePoints(danger_closing.missile_line, 0.25) FROM danger_closing"
         )
 
-    # Find the middle points of the line using st_line_interpolate_point from the missiles_intersects.missile_line
+    # Find the last(JUST CHANGED IT) points of the line using st_line_interpolate_point from the missiles_intersects.missile_line
     # id SERIAL PRIMARY KEY
     # missile_id INT
     # danger_closing boolean
@@ -378,7 +378,7 @@ if __name__ == "__main__":
             "CREATE TABLE missiles_Intersects_middle (id SERIAL PRIMARY KEY, missile_id INT, danger_closing boolean, missile_line geometry, missiles_Intersects geometry, missiles_Intersects_middle geometry)"
         )
         cur.execute(
-            "INSERT INTO missiles_Intersects_middle (missile_id, danger_closing, missile_line, missiles_Intersects, missiles_Intersects_middle) SELECT missiles_Intersects.missile_id, missiles_Intersects.danger_closing, missiles_Intersects.missile_line, missiles_Intersects.missiles_Intersects, ST_LineInterpolatePoint(missiles_Intersects.missile_line, 0.5) FROM missiles_Intersects"
+            "INSERT INTO missiles_Intersects_middle (missile_id, danger_closing, missile_line, missiles_Intersects, missiles_Intersects_middle) SELECT missiles_Intersects.missile_id, missiles_Intersects.danger_closing, missiles_Intersects.missile_line, missiles_Intersects.missiles_Intersects, ST_LineInterpolatePoint(missiles_Intersects.missile_line, .1) FROM missiles_Intersects"
         )
 
     # Find the longitude and latitude of missiles_intersects_middle
@@ -399,7 +399,7 @@ if __name__ == "__main__":
             "INSERT INTO missiles_Intersects_middle_lon_lat (missile_id, danger_closing, missile_line, missiles_Intersects, missiles_Intersects_middle, longitude, latitude) SELECT missiles_Intersects_middle.missile_id, missiles_Intersects_middle.danger_closing, missiles_Intersects_middle.missile_line, missiles_Intersects_middle.missiles_Intersects, missiles_Intersects_middle.missiles_Intersects_middle, ST_X(missiles_Intersects_middle.missiles_Intersects_middle), ST_Y(missiles_Intersects_middle.missiles_Intersects_middle) FROM missiles_Intersects_middle"
         )
 
-    # Finding the longitude and latitude of our battery table
+    # Finding the longitude and latitude of our battery
     # battery.geom is geometry
     # battery.longitude is double precision
     # battery.latitude is double precision
@@ -430,48 +430,64 @@ if __name__ == "__main__":
             "CREATE TABLE point_to_shoot (id SERIAL PRIMARY KEY, missile_id INT, missiles_Intersects geometry, missiles_Intersects_middle geometry, longitude DOUBLE PRECISION, latitude DOUBLE PRECISION, battery_lon_lat_geom geometry, point_to_shoot_lon DOUBLE PRECISION, point_to_shoot_lat DOUBLE PRECISION, point_to_shoot geometry, distance DOUBLE PRECISION, distance_line geometry)"
         )
         cur.execute(
-            "INSERT INTO point_to_shoot (missile_id, missiles_Intersects, missiles_Intersects_middle, longitude, latitude, battery_lon_lat_geom, point_to_shoot_lon, point_to_shoot_lat, point_to_shoot, distance, distance_line) SELECT missiles_Intersects_middle_lon_lat.missile_id, missiles_Intersects_middle_lon_lat.missiles_Intersects, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle, missiles_Intersects_middle_lon_lat.longitude, missiles_Intersects_middle_lon_lat.latitude, battery_lon_lat.geom, ST_X(ST_LineInterpolatePoint(ST_MakeLine(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle), 0.5)), ST_Y(ST_LineInterpolatePoint(ST_MakeLine(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle), 0.5)), ST_LineInterpolatePoint(ST_MakeLine(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle), 0.5), ST_Distance(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle), ST_MakeLine(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle) FROM missiles_Intersects_middle_lon_lat, battery_lon_lat"
+            "INSERT INTO point_to_shoot (missile_id, missiles_Intersects, missiles_Intersects_middle, longitude, latitude, battery_lon_lat_geom, point_to_shoot_lon, point_to_shoot_lat, point_to_shoot, distance, distance_line) SELECT missiles_Intersects_middle_lon_lat.missile_id, missiles_Intersects_middle_lon_lat.missiles_Intersects, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle, missiles_Intersects_middle_lon_lat.longitude, missiles_Intersects_middle_lon_lat.latitude, battery_lon_lat.geom, ST_X(ST_LineInterpolatePoint(ST_MakeLine(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle), 0.8)), ST_Y(ST_LineInterpolatePoint(ST_MakeLine(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle), 0.8)), ST_LineInterpolatePoint(ST_MakeLine(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle), 0.5), ST_Distance(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle), ST_MakeLine(battery_lon_lat.geom, missiles_Intersects_middle_lon_lat.missiles_Intersects_middle) FROM missiles_Intersects_middle_lon_lat, battery_lon_lat"
         )
 
     # Make a table call point_to_shoot_altitude that will Find the altitude of the missile at this point (missiles_Intersects_middle geometry)
     # using the drop_rate from drop_rate table and the time from time_missile_ground.
     # id SERIAL PRIMARY KEY
     # missile_id INT
-    # Altitude = drop_rate * (time_missile_ground / 2)
+    # Altitude = drop_rate * (time_missile_ground / 7)
     # drop_rate DOUBLE PRECISION
     # time_missile_ground DOUBLE PRECISION
     # missiles_Intersects_middle geometry
     # altitude DOUBLE PRECISION
+    # altitude geom
     with DatabaseCursor(".config.json") as cur:
         cur.execute(
             "DROP TABLE IF EXISTS point_to_shoot_altitude;"
-            "CREATE TABLE point_to_shoot_altitude (id SERIAL PRIMARY KEY, missile_id INT, drop_rate DOUBLE PRECISION, time_missile_ground DOUBLE PRECISION, missiles_Intersects_middle geometry, altitude DOUBLE PRECISION)"
+            "CREATE TABLE point_to_shoot_altitude (id SERIAL PRIMARY KEY, missile_id INT, drop_rate DOUBLE PRECISION, time_missile_ground DOUBLE PRECISION, missiles_Intersects_middle geometry, altitude DOUBLE PRECISION, altitude_geom geometry)"
         )
         cur.execute(
-            "INSERT INTO point_to_shoot_altitude (missile_id, drop_rate, time_missile_ground, missiles_Intersects_middle, altitude) SELECT point_to_shoot.missile_id, drop_rate.drop_rate, time_missile_ground.time_missile_ground, point_to_shoot.missiles_Intersects_middle, drop_rate.drop_rate * (time_missile_ground.time_missile_ground / 2) FROM point_to_shoot, drop_rate, time_missile_ground WHERE point_to_shoot.missile_id = drop_rate.missile_id AND point_to_shoot.missile_id = time_missile_ground.missile_id"
+            "INSERT INTO point_to_shoot_altitude (missile_id, drop_rate, time_missile_ground, missiles_Intersects_middle, altitude, altitude_geom) SELECT point_to_shoot.missile_id, drop_rate.drop_rate, time_missile_ground.time_missile_ground, point_to_shoot.missiles_Intersects_middle, drop_rate.drop_rate * (time_missile_ground.time_missile_ground / 7), ST_SetSRID(ST_MakePoint(ST_X(point_to_shoot.missiles_Intersects_middle), ST_Y(point_to_shoot.missiles_Intersects_middle), drop_rate.drop_rate * (time_missile_ground.time_missile_ground / 7)), 4326) FROM point_to_shoot, drop_rate, time_missile_ground WHERE point_to_shoot.missile_id = drop_rate.missile_id AND point_to_shoot.missile_id = time_missile_ground.missile_id"
         )
 
+    # Make a table to get the point_to_shoot_altitude_distance
+    # calculate the distance between the point_to_shoot_altitude and our battery location
+    # id SERIAL PRIMARY KEY
+    # missile_id INT
+    # missiles_Intersects_middle geometry
+    # point_to_shoot_altitude geometry
+    # distance DOUBLE PRECISION
+    with DatabaseCursor(".config.json") as cur:
+        cur.execute(
+            "DROP TABLE IF EXISTS point_to_shoot_altitude_distance;"
+            "CREATE TABLE point_to_shoot_altitude_distance (id SERIAL PRIMARY KEY, missile_id INT, missiles_Intersects_middle geometry, point_to_shoot_altitude geometry, distance DOUBLE PRECISION)"
+        )
+        cur.execute(
+            "INSERT INTO point_to_shoot_altitude_distance (missile_id, missiles_Intersects_middle, point_to_shoot_altitude, distance) SELECT point_to_shoot_altitude.missile_id, point_to_shoot_altitude.missiles_Intersects_middle, point_to_shoot_altitude.altitude_geom, ST_Distance(point_to_shoot_altitude.altitude_geom, battery_lon_lat.geom) FROM point_to_shoot_altitude, battery_lon_lat"
+        )
 
-    # This table is used to to Find the Number of seconds to destroy the missile.
-    # We shooting a missile from our battery location to this point(missiles_Intersects_middle geometry)
-    # and we know the distance from the battery to the point(missiles_Intersects_middle geometry) 
-    # we using Atlas speed = 24975.
-    # Time = (distance / 24975)
+    # This table is used to calculate the Number of seconds to destroy the missile.
+    # We shooting a missile from our battery location(longitude and latitude) to
+    # this point(missiles_Intersects_middle geometry)
+    # we know the distance from the battery to the point(missiles_Intersects_middle geometry)
+    # and the speed of the missile => Trident ( using this as speed of the missile 49950)
+    # we can calculate the time to reach the point(missiles_Intersects_middle geometry)
     # id SERIAL PRIMARY KEY
     # missile_id INT
     # missiles_Intersects_middle geometry
     # distance DOUBLE PRECISION
+    # speed_missile DOUBLE PRECISION
     # time DOUBLE PRECISION
     with DatabaseCursor(".config.json") as cur:
         cur.execute(
             "DROP TABLE IF EXISTS numb_sec_reach_missile;"
-            "CREATE TABLE numb_sec_reach_missile (id SERIAL PRIMARY KEY, missile_id INT, missiles_Intersects_middle geometry, distance DOUBLE PRECISION, time DOUBLE PRECISION)"
+            "CREATE TABLE numb_sec_reach_missile (id SERIAL PRIMARY KEY, missile_id INT, missiles_Intersects_middle geometry, distance DOUBLE PRECISION, speed_missile DOUBLE PRECISION, time DOUBLE PRECISION)"
         )
         cur.execute(
-            "INSERT INTO numb_sec_reach_missile (missile_id, missiles_Intersects_middle, distance, time) SELECT point_to_shoot.missile_id, point_to_shoot.missiles_Intersects_middle, point_to_shoot.distance, point_to_shoot.distance / 24975 FROM point_to_shoot"
+            "INSERT INTO numb_sec_reach_missile (missile_id, missiles_Intersects_middle, distance, speed_missile, time) SELECT point_to_shoot_altitude_distance.missile_id, point_to_shoot_altitude_distance.missiles_Intersects_middle, point_to_shoot_altitude_distance.distance, 49950, point_to_shoot_altitude_distance.distance / 49950 FROM point_to_shoot_altitude_distance"
         )
-    
-
 
     # Add numb_sec_reach_missile.time to the missiles2.time2
     # id SERIAL PRIMARY KEY
@@ -489,10 +505,9 @@ if __name__ == "__main__":
         cur.execute(
             "INSERT INTO return_time (missile_id, missiles_Intersects_middle, distance, time, time2, return_time) SELECT numb_sec_reach_missile.missile_id, numb_sec_reach_missile.missiles_Intersects_middle, numb_sec_reach_missile.distance, numb_sec_reach_missile.time, missiles2.time2, numb_sec_reach_missile.time + missiles2.time2 FROM numb_sec_reach_missile, missiles2 WHERE numb_sec_reach_missile.missile_id = missiles2.missile_id"
         )
-        
-        
+
     # Convert the seconds of return_time.return.time to hh:mm:ss format
-    # time stamp in following format : "2022-11-05 15:21:58.983496" 
+    # time stamp in following format : "2022-11-05 15:21:58.983496"
     # doing str(datetime.now())
     # id SERIAL PRIMARY KEY
     # missile_id INT
@@ -508,9 +523,9 @@ if __name__ == "__main__":
             "CREATE TABLE return_time_hh_mm_ss (id SERIAL PRIMARY KEY, missile_id INT, missiles_Intersects_middle geometry, distance DOUBLE PRECISION, time DOUBLE PRECISION, time2 DOUBLE PRECISION, return_time DOUBLE PRECISION, return_time_hh_mm_ss TIMESTAMP)"
         )
         cur.execute(
-            "INSERT INTO return_time_hh_mm_ss (missile_id, missiles_Intersects_middle, distance, time, time2, return_time, return_time_hh_mm_ss) SELECT return_time.missile_id, return_time.missiles_Intersects_middle, return_time.distance, return_time.time, return_time.time2, return_time.return_time, now() + return_time.return_time * interval '1 second' FROM return_time"
+            "INSERT INTO return_time_hh_mm_ss (missile_id, missiles_Intersects_middle, distance, time, time2, return_time, return_time_hh_mm_ss) SELECT return_time.missile_id, return_time.missiles_Intersects_middle, return_time.distance, return_time.time, return_time.time2, return_time.return_time, now() + return_time.return_time * interval '3600 second' FROM return_time"
         )
-        
+
     # make return_time_hh_mm_ss printable to json format
     # id SERIAL PRIMARY KEY
     # missile_id INT
@@ -529,5 +544,25 @@ if __name__ == "__main__":
         cur.execute(
             "INSERT INTO return_time_hh_mm_ss_printable (missile_id, missiles_Intersects_middle, distance, time, time2, return_time, return_time_hh_mm_ss, return_time_hh_mm_ss_printable) SELECT return_time_hh_mm_ss.missile_id, return_time_hh_mm_ss.missiles_Intersects_middle, return_time_hh_mm_ss.distance, return_time_hh_mm_ss.time, return_time_hh_mm_ss.time2, return_time_hh_mm_ss.return_time, return_time_hh_mm_ss.return_time_hh_mm_ss, to_char(return_time_hh_mm_ss.return_time_hh_mm_ss, 'YYYY-MM-DD HH24:MI:SS') FROM return_time_hh_mm_ss"
         )
-            
-            
+
+
+
+    # Change the return_time_hh_mm_ to CENTRAL TIME
+    # id SERIAL PRIMARY KEY
+    # missile_id INT
+    # missiles_Intersects_middle geometry
+    # distance DOUBLE PRECISION
+    # time DOUBLE PRECISION
+    # time2 DOUBLE PRECISION
+    # return_time DOUBLE PRECISION
+    # return_time_hh_mm_ss
+    # return_time_hh_mm_ss_printable string
+    # return_time_hh_mm_ss_printable_central_time
+    with DatabaseCursor(".config.json") as cur:
+        cur.execute(
+            "DROP TABLE IF EXISTS return_time_hh_mm_ss_printable_central_time;"
+            "CREATE TABLE return_time_hh_mm_ss_printable_central_time (id SERIAL PRIMARY KEY, missile_id INT, missiles_Intersects_middle geometry, distance DOUBLE PRECISION, time DOUBLE PRECISION, time2 DOUBLE PRECISION, return_time DOUBLE PRECISION, return_time_hh_mm_ss TIMESTAMP, return_time_hh_mm_ss_printable VARCHAR, return_time_hh_mm_ss_printable_central_time VARCHAR)"
+        )
+        cur.execute(
+            "INSERT INTO return_time_hh_mm_ss_printable_central_time (missile_id, missiles_Intersects_middle, distance, time, time2, return_time, return_time_hh_mm_ss, return_time_hh_mm_ss_printable, return_time_hh_mm_ss_printable_central_time) SELECT return_time_hh_mm_ss_printable.missile_id, return_time_hh_mm_ss_printable.missiles_Intersects_middle, return_time_hh_mm_ss_printable.distance, return_time_hh_mm_ss_printable.time, return_time_hh_mm_ss_printable.time2, return_time_hh_mm_ss_printable.return_time, return_time_hh_mm_ss_printable.return_time_hh_mm_ss, return_time_hh_mm_ss_printable.return_time_hh_mm_ss_printable, (return_time_hh_mm_ss_printable.return_time_hh_mm_ss_printable::timestamp + interval '6 hour')::text FROM return_time_hh_mm_ss_printable"
+        )
