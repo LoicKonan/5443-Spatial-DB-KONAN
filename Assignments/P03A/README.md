@@ -6,13 +6,13 @@
 
 - Missile Command was an 80's arcade game in which the player had to defend earth using anti-missile batteries that shot defensive "clouds" into the air (see animation).
 - We will create our own "no graphics" implementation of the game incorporating our spatial db concepts.
-- This first part of the game is to determine how many military bases, and to generate a series of missile paths which intersect with a military base and get shot down.
+- This first part of the game is to determine our Region and to generate a series of missile paths which intersect with a our region to shoot it down.
 
 <img src="pic.png">
 
 #### Data
 
-1. [US_Military_Base](US_Military_Bases) - This is a list of military bases in the US.
+1. [US_Military_Base](US_Military_Bases) - This is a list of military bases in the US. But below is our **Region**
 
 <img src="pic1.png">
 
