@@ -103,7 +103,7 @@ async def docs_redirect():
 # This api routes is used to display bounding box, and get the center of the bbox as well as the geometry.
 @app.get("/bbox")
 async def get_bbox():
-    sql = """SELECT ST_AsGeoJSON(ST_Envelope(geom)) FROM military_bases LIMIT 1"""
+    sql = """SELECT ST_AsGeoJSON(ST_Envelope(geom)) FROM myregion LIMIT 1"""
     
     with DatabaseCursor(".config.json") as cur:
         cur.execute(sql)
@@ -114,7 +114,7 @@ async def get_bbox():
 # This api routes is used to display interpolate points between two ends at 1 percent intervals:
 @app.get("/interpolate")
 async def get_interpolate():
-    sql = """SELECT ST_AsGeoJSON(ST_LineInterpolatePoints(geom, 0.01)) FROM military_bases LIMIT 1"""
+    sql = """SELECT ST_AsGeoJSON(ST_LineInterpolatePoints(geom, 0.01)) FROM myregion LIMIT 1"""
     
     with DatabaseCursor(".config.json") as cur:
         cur.execute(sql)
@@ -124,7 +124,7 @@ async def get_interpolate():
 # This api routes is used to display Calculate the area of a geometry
 @app.get("/area")
 async def get_area():
-    sql = """SELECT ST_AsGeoJSON(ST_Area(geom)) FROM military_bases LIMIT 1"""
+    sql = """SELECT ST_AsGeoJSON(ST_Area(geom)) FROM myregion LIMIT 1"""
     
     with DatabaseCursor(".config.json") as cur:
         cur.execute(sql)
