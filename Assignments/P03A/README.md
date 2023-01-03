@@ -1,4 +1,4 @@
-## Project 03  Missile Command (Part 1) 
+## Project 03  Missile Command (Part 1)
 
 ### Loic Konan
 
@@ -8,6 +8,7 @@
 - We will create our own "no graphics" implementation of the game incorporating our spatial db concepts.
 - This first part of the game is to determine how many military bases, and to generate a series of missile paths which intersect with a military base and get shot down.
 
+<img src="pic.png">
 
 #### Data
 
@@ -26,7 +27,7 @@
 |   #   | File                                                                                   | Description |
 | :---: | -------------------------------------------------------------------------------------- | ----------- |
 |   1   | [https://postgis.net/docs/ST_Buffer.html](https://postgis.net/docs/ST_Buffer.html)     | ST_Buffer   |
-|   2   | [https://postgis.net/docs/ST_Distance.html](https://postgis.net/docs/ST_Distance.html) | ST_Distance | 
+|   2   | [https://postgis.net/docs/ST_Distance.html](https://postgis.net/docs/ST_Distance.html) | ST_Distance |
 |  16   | [https://postgis.net/docs/ST_Area.html](https://postgis.net/docs/ST_Area.html)         | ST_Area     |
 
 ### References Description
