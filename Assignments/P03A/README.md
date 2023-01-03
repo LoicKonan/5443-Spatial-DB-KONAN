@@ -6,7 +6,10 @@
 
 - Missile Command was an 80's arcade game in which the player had to defend earth using anti-missile batteries that shot defensive "clouds" into the air (see animation).
 - We will create our own "no graphics" implementation of the game incorporating our spatial db concepts.
-- This first part of the game is to determine our Region and to generate a series of missile paths which intersect with a our region to shoot it down.
+- This first part of the game is to determine our Region and to generate a series of missile paths which intersect with a our region.
+- 
+
+
 
 <img src="pic.png">
 
