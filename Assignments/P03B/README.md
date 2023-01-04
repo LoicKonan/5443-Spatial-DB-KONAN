@@ -4,6 +4,49 @@
 
 #### Description
 
+- The goal of Missile Command (Part 2) is to detect all the enemy missiles and shoot them down.
+- In order to accomplish our mission we had to:
+
+  - Created tables call myregion and arsenal in our postgres Database, then insert the information that we receive from the server (<http://missilecommand.live:8080/START/)> in that table.
+  
+    - myregion is the region in the USA that I will be defending from the enemy incoming missiles.
+    - arsenal is all the weapons/missiles that I will use to defend my region.
+
+    ```json
+        {
+          "Atlas": 20,
+          "Harpoon": 13,
+          "Hellfire": 12,
+          "Javelin": 11,
+          "Minuteman": 9,
+          "Patriot": 9,
+          "Peacekeeper": 8,
+          "SeaSparrow": 8,
+          "Titan": 5,
+          "Tomahawk": 4,
+          "Trident": 1,
+          "total": 10
+        }
+      ```
+
+    - This will be be automatically perform by just running [register.py](register.py).
+  
+  - Perform Radar Sweep:
+    - The Radar Sweep will create 2 missiles json to calculate bearing speed altitude and drop rate of the enemy missile.
+  
+      - [missile1.json](missile1.json) is use to see the geo-location of the incoming missiles.
+      - [missile2.json](missile2.json) is use with the [missile1.json](missile1.json) to calculate the following:
+        - Bearing
+        - Speed
+        - Altitude
+        - Drop Rate
+        - Missile geometry
+        - Point to shoot the incoming missiles
+        - Number of seconds to destroy the missiles
+        - Time in which the intersection will occur
+      - This will be be automatically perform by just running [radar_sweep.py](radar_sweep.py).
+
+  
 
 
 
