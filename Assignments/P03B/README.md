@@ -1,78 +1,100 @@
-## Project 04  Missile Command (Part 2) 
+## Project 04  Missile Command (Part 2)
 
 ### Loic Konan, Deangelo Brown, Byron Dowling
 
 #### Description
 
 - The goal of Missile Command (Part 2) is to detect all the enemy missiles and shoot them down.
-- In order to accomplish our mission we had to:
-
-  - Created tables call myregion and arsenal in our postgres Database, then insert the information that we receive from the server (<http://missilecommand.live:8080/START/)> in that table.
+- In order to accomplish our mission we had to: <br><br>
+  
+  **1)** run the file [register.py](register.py), which will accomplish these below:
+  - Created tables call **myregion** and **arsenal** in our postgres Database, then insert the information that we receive from the server (<http://missilecommand.live:8080/START/)> in the tables.
   
     - myregion is the region in the USA that I will be defending from the enemy incoming missiles.
     - arsenal is all the weapons/missiles that I will use to defend my region.
 
-    ```json
-        {
-          "Atlas": 20,
-          "Harpoon": 13,
-          "Hellfire": 12,
-          "Javelin": 11,
-          "Minuteman": 9,
-          "Patriot": 9,
-          "Peacekeeper": 8,
-          "SeaSparrow": 8,
-          "Titan": 5,
-          "Tomahawk": 4,
-          "Trident": 1,
-          "total": 10
-        }
-      ```
+      ```json
+          {
+            "Atlas": 20,
+            "Harpoon": 13,
+            "Hellfire": 12,
+            "Javelin": 11,
+            "Minuteman": 9,
+            "Patriot": 9,
+            "Peacekeeper": 8,
+            "SeaSparrow": 8,
+            "Titan": 5,
+            "Tomahawk": 4,
+            "Trident": 1,
+            "total": 10
+          }
+        ```
 
-    - This will be be automatically perform by just running [register.py](register.py).
+  <br><br>
+  **2)**  run the file [radar_sweep.py](radar_sweep.py):
+  - The Radar Sweep will create 2 missiles json to calculate bearing speed altitude and drop rate of the enemy missile.
+    - [missile1.json](missile1.json) is use to see the geo-location of the incoming missiles.
+    - [missile2.json](missile2.json) is use with the [missile1.json](missile1.json) to calculate the following:
+      - Bearing
+      - Speed
+      - Altitude
+      - Drop Rate
+      - Missile geometry
+      - Point to shoot the incoming missiles
+      - Number of seconds to destroy the missiles
+      - Time in which the intersection will occur
+      - Missile Destination
+      - Intersection points
+      - Conversion of the time to return to the sever
+
+  <br><br>
+  **3)**  run the file [quit.py](quit.py):
+  - The quit file will send the information to the server to Stop Sending them Damn Missiles to our region.
+
+  <br><br>
+  **4)**  run the file [solution.py](solution.py):
+  - The solution file will first retrieve some information from our postgres Database and then send it to the server <http://missilecommand.live:8080/FIRE_SOLUTION/>
+
+  - The information that we will send to the server are:
+
+    - **team_id**           => get region id (rid) from myregion table
+    - **target_missile_id** => Get the missile id from the table point_to_shoot
+    - **missile_type**      => Get the missile type from the table speed database
+    - **fired_time**        => Get the return time from the missile2 table.
+    - **firedfrom_lat**     => Get the battery latitude from the table battery_lon_lat
+    - **firedfrom_lon**     => Get the battery longitude from the table battery_lon_lat
+    - **aim_lat**           => Get the target latitude from the table point_to_shoot
+    - **aim_lon**           => Get the target latitude longitude from the table point_to_shoot
+    - **expected_hit_time** => Get the return time from the return_time_hh_mm_ss table.
+    - **target_alt**        => Get the target altitude from the table point_to_shoot_altitude
+
+  <br><br>
+  **5)**  run the file [GetStats.py](GetStats.py):
+  - The GetStats file will retrieve the information from the server <http://missilecommand.live:8080/STATS/> and display it in the terminal.
+  - This will display the missiles that we destroyed and the missiles that we missed in the terminal.
   
-  - Perform Radar Sweep:
-    - The Radar Sweep will create 2 missiles json to calculate bearing speed altitude and drop rate of the enemy missile.
-  
-      - [missile1.json](missile1.json) is use to see the geo-location of the incoming missiles.
-      - [missile2.json](missile2.json) is use with the [missile1.json](missile1.json) to calculate the following:
-        - Bearing
-        - Speed
-        - Altitude
-        - Drop Rate
-        - Missile geometry
-        - Point to shoot the incoming missiles
-        - Number of seconds to destroy the missiles
-        - Time in which the intersection will occur
-      - This will be be automatically perform by just running [radar_sweep.py](radar_sweep.py).
-
-  
-
-
-
-
-
+  <br><br>
+  **6)**  run the file [reset.py](reset.py):
+  - The reset file will reset the information that we got from the sever. <http://missilecommand.live:8080/RESET>
 
 ### Example Response
 
-```json
-{
-  "Atlas": 20,
-  "Harpoon": 13,
-  "Hellfire": 12,
-  "Javelin": 11,
-  "Minuteman": 9,
-  "Patriot": 9,
-  "Peacekeeper": 8,
-  "SeaSparrow": 8,
-  "Titan": 5,
-  "Tomahawk": 4,
-  "Trident": 1,
-  "total": 10
-}
-```
-
-
+  ```json
+  {
+    "Atlas": 20,
+    "Harpoon": 13,
+    "Hellfire": 12,
+    "Javelin": 11,
+    "Minuteman": 9,
+    "Patriot": 9,
+    "Peacekeeper": 8,
+    "SeaSparrow": 8,
+    "Titan": 5,
+    "Tomahawk": 4,
+    "Trident": 1,
+    "total": 10
+  }
+  ```
 
 ### Instructions
 
@@ -81,7 +103,6 @@
 ### Example Command
 
 - None for now.
-
 
 ### Files
 
@@ -94,8 +115,6 @@
 |   5   | [callPostApi.py](callPostApi.py)     | Call The Post file for the project                |
 |   6   | [postApi.py](postApi.py)             | The postApi file for the project                  |
 |   7   | [sql](./sql)                         | The sql folder with the sql files for the project |
-
-
 
 ### References
 
