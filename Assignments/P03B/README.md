@@ -48,13 +48,13 @@
       - battery (our Missile Command Geo-location)
        <img src="pic4.png">
       - Incoming Missiles points
-        <img src="pic5.png"> 
+        <img src="pic5.png">
       - Incoming Missile geometry Lines
         <img src="pic3.png">
       - Point to shoot the incoming missiles
         <img src="pic2.png">
       - Incoming Missile Destination Line
-        <img src="pic6.png"> 
+        <img src="pic6.png">
 
   <br><br>
   **3)**  run the file [quit.py](quit.py):
@@ -82,7 +82,6 @@
   - We will receive a response from the attacking team telling us if we strike some missiles down or not.
   <img src="pic1.png">
 
-
   <br><br>
   **5)**  run the file [GetStats.py](GetStats.py):
   - The GetStats file will retrieve the information from the server <http://missilecommand.live:8080/STATS/> and display it in the terminal.
@@ -93,7 +92,6 @@
   - The reset file will reset the information that we got from the sever. <http://missilecommand.live:8080/RESET>
 
 ### Example Response
-
 
 ### Instructions
 
