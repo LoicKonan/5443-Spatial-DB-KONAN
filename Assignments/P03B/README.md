@@ -11,6 +11,8 @@
   - Created tables call **myregion** and **arsenal** in our postgres Database, then insert the information that we receive from the server (<http://missilecommand.live:8080/START/)> in the tables.
   
     - myregion is the region in the USA that I will be defending from the enemy incoming missiles.
+<img src="pic.png">
+
     - arsenal is all the weapons/missiles that I will use to defend my region.
 
       ```json
@@ -40,14 +42,19 @@
       - Speed
       - Altitude
       - Drop Rate
-      - Missile geometry
-      - Point to shoot the incoming missiles
       - Number of seconds to destroy the missiles
-      - Time in which the intersection will occur
-      - Missile Destination
-      - Intersection points
-      - Calculate Time
-      - Change the format of the timestamp to YYYY-MM-DD and 24HR-mm-ss  **example: "2022-12-12 16:53:14"** 
+      - Calculate Time to intercept the incoming Missiles.
+      - Change the format of the timestamp to YYYY-MM-DD and 24HR-mm-ss  **example: "2022-12-12 16:53:14"**
+      - battery (our Missile Command Geo-location)
+       <img src="pic4.png">
+      - Incoming Missiles points
+        <img src="pic5.png"> 
+      - Incoming Missile geometry Lines
+        <img src="pic3.png">
+      - Point to shoot the incoming missiles
+        <img src="pic2.png">
+      - Incoming Missile Destination Line
+        <img src="pic6.png"> 
 
   <br><br>
   **3)**  run the file [quit.py](quit.py):
@@ -70,6 +77,10 @@
     - **aim_lon**           => Get the target latitude longitude from the table point_to_shoot
     - **expected_hit_time** => Get the return time from the return_time_hh_mm_ss table.
     - **target_alt**        => Get the target altitude from the table point_to_shoot_altitude
+  
+  - We will receive a response from the attacking team telling us if we strike some missiles down or not.
+  <img src="pic1.png">
+
 
   <br><br>
   **5)**  run the file [GetStats.py](GetStats.py):
