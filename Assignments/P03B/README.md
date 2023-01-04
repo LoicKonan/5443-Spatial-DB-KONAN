@@ -1,6 +1,6 @@
 ## Project 04  Missile Command (Part 2) 
 
-### Deangelo Brown, Byron Dowling, Loic Konan
+### Loic Konan, Deangelo Brown, Byron Dowling
 
 #### Description
 
