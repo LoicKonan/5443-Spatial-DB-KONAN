@@ -46,7 +46,8 @@
       - Time in which the intersection will occur
       - Missile Destination
       - Intersection points
-      - Conversion of the time to return to the sever
+      - Calculate Time
+      - Change the format of the timestamp to YYYY-MM-DD and 24HR-mm-ss  **example: "2022-12-12 16:53:14"** 
 
   <br><br>
   **3)**  run the file [quit.py](quit.py):
