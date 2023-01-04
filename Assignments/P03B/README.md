@@ -64,6 +64,7 @@
   <br><br>
   **4)**  run the file [solution.py](solution.py):
   - The solution file will first retrieve some information from our postgres Database and then send it to the server <http://missilecommand.live:8080/FIRE_SOLUTION/>
+    <img src="pic7.png">
 
   - The information that we will send to the server are:
 
