@@ -33,6 +33,7 @@
   <br><br>
   **2)**  run the file [radar_sweep.py](radar_sweep.py):
   - The Radar Sweep will create 2 missiles json to calculate bearing speed altitude and drop rate of the enemy missile.
+  - <http://missilecommand.live:8080/RADAR_SWEEP>
     - [missile1.json](missile1.json) is use to see the geo-location of the incoming missiles.
     - [missile2.json](missile2.json) is use with the [missile1.json](missile1.json) to calculate the following:
       - Bearing
@@ -49,6 +50,7 @@
 
   <br><br>
   **3)**  run the file [quit.py](quit.py):
+  - <http://http://missilecommand.live:8080/QUIT>
   - The quit file will send the information to the server to Stop Sending them Damn Missiles to our region.
 
   <br><br>
@@ -79,30 +81,48 @@
 
 ### Example Response
 
-  ```json
-  {
-    "Atlas": 20,
-    "Harpoon": 13,
-    "Hellfire": 12,
-    "Javelin": 11,
-    "Minuteman": 9,
-    "Patriot": 9,
-    "Peacekeeper": 8,
-    "SeaSparrow": 8,
-    "Titan": 5,
-    "Tomahawk": 4,
-    "Trident": 1,
-    "total": 10
-  }
-  ```
 
 ### Instructions
 
-- This program does not require any non standard libraries
+- To run the program, you will need to install the following:
+
+  - [Python 3.7.3](https://www.python.org/downloads/release/python-373/)
+  - [PostgreSQL 11.5](https://www.postgresql.org/download/)
+  - [PostGIS 2.5.3](https://postgis.net/install/)
+  - [psycopg2 2.8.3](https://pypi.org/project/psycopg2/)
+  - [requests 2.22.0](https://pypi.org/project/requests/)
+  - [geojson 2.5.0](https://pypi.org/project/geojson/)
+  
+- To run the program, you will need to create a database in PostgreSQL and then create the extension postgis in the database.
+
+  - To create a database, type the following command in the terminal:
+
+    ```bash
+    createdb -U postgres -h localhost -p 5432 -W <database_name>
+    ```
+
+  - To create the extension postgis, type the following command in the terminal:
+
+    ```bash
+    psql -U postgres -h localhost -p 5432 -W <database_name>
+    ```
+
+    ```sql
+    CREATE EXTENSION postgis;
+    ```
 
 ### Example Command
 
-- None for now.
+- To run the program, type the following command in the terminal:
+
+  ```bash
+  python3 register.py
+  python3 radar_sweep.py
+  python3 quit.py
+  python3 solution.py
+  python3 GetStats.py
+  python3 reset.py
+  ```
 
 ### Files
 
