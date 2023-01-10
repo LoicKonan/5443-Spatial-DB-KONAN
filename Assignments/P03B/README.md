@@ -15,22 +15,23 @@
 
     - arsenal is all the weapons/missiles that I will use to defend my region.
 
-      ```json
-          {
-            "Atlas": 20,
-            "Harpoon": 13,
-            "Hellfire": 12,
-            "Javelin": 11,
-            "Minuteman": 9,
-            "Patriot": 9,
-            "Peacekeeper": 8,
-            "SeaSparrow": 8,
-            "Titan": 5,
-            "Tomahawk": 4,
-            "Trident": 1,
-            "total": 10
-          }
-        ```
+```
+json
+      {
+        "Atlas": 20,
+        "Harpoon": 13,
+        "Hellfire": 12,
+        "Javelin": 11,
+        "Minuteman": 9,
+        "Patriot": 9,
+        "Peacekeeper": 8,
+        "SeaSparrow": 8,
+        "Titan": 5,
+        "Tomahawk": 4,
+        "Trident": 1,
+        "total": 10
+      }
+```
 
   <br><br>
   **2)**  run the file [radar_sweep.py](radar_sweep.py):
