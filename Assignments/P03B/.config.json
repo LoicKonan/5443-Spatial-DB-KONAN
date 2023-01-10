@@ -1,8 +1,17 @@
+// {
+//     "dbname": "missilecommand",
+//     "user": "commander",
+//     "password": "battery",
+//     "host": "137.184.122.192",
+//     "port": "5432",
+//     "schema": "public"
+// }
+
 {
-    "dbname": "missilecommand",
-    "user": "commander",
-    "password": "battery",
-    "host": "137.184.122.192",
+    "dbname": "Project3",
+    "user": "postgres",
+    "password": "kouassi",
+    "host": "localhost",
     "port": "5432",
     "schema": "public"
 }
